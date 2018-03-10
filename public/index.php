@@ -24,9 +24,16 @@ define('PUBLIC_DIR',  BASE_DIR . '/app/');
 /**
  * Error and Exception handling
  */
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-$whoops->register();
+if (Core\Config::get('SHOW_ERRORS') === 1) {
+    echo 1;
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $whoops->register();
+} else {
+    error_reporting(E_ALL); 
+    set_error_handler('Core\Error::errorHandler');
+    set_exception_handler('Core\Error::exceptionHandler');
+}
 
 
 /**
