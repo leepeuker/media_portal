@@ -4,6 +4,7 @@ namespace Utilities;
 
 use \Models\User;
 use \Models\RememberedLogin;
+use \Core\Session;
 
 /**
  * Provides authentication services
@@ -21,9 +22,7 @@ class Auth
      */
     public static function login($user, $remember_me)
     {
-        session_regenerate_id(true);
-
-        $_SESSION['user_id'] = $user->id;
+        Session::setUser($user->id);
         
         $user->updateLastLogin();
 
@@ -43,25 +42,7 @@ class Auth
      */
     public static function logout()
     {
-        // Unset all of the session variables
-        $_SESSION = [];
-
-        // Delete the session cookie
-        if (ini_get('session.use_cookies')) {
-            $params = session_get_cookie_params();
-            setcookie(
-                session_name(),
-                '',
-                time() - 42000,
-                $params['path'],
-                $params['domain'],
-                $params['secure'],
-                $params['httponly']
-            );
-        }
-
-        session_destroy();
-
+        Session::destroy();
         static::forgetLogin();
     }
 
@@ -92,9 +73,9 @@ class Auth
      */
     public static function getUser()
     {
-        if (isset($_SESSION['user_id'])) {
+        if ($id = Session::getUserId()) {
 
-            return User::findByID($_SESSION['user_id']);
+            return User::findByID($id);
 
         } else {
 
@@ -113,7 +94,7 @@ class Auth
 
         if ($cookie) {
 
-            $remembered_login = \Models\RememberedLogin::findByToken($cookie);
+            $remembered_login = RememberedLogin::findByToken($cookie);
 
             if ($remembered_login && !$remembered_login->hasExpired()) {
 
@@ -135,7 +116,7 @@ class Auth
         $cookie = $_COOKIE['remember_me'] ?? false;
 
         if ($cookie) {
-            $remembered_login = \Models\RememberedLogin::findByToken($cookie);
+            $remembered_login = RememberedLogin::findByToken($cookie);
 
             if ($remembered_login) {
                 $remembered_login->delete();
