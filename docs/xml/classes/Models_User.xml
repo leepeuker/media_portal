@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Models\User" namespace="Models" name="User" abstract="false" final="false" start="19" end="539">
+  <file path="/var/www/media/app/Models" file="User.php" realpath="/var/www/media/app/Models/User.php" size="15089" time="2018-03-07T19:43:02+00:00" unixtime="1520451782" sha1="17f057c95c598d6707b812b526e32ddf4c3de9c1" relative="Models/User.php"/>
+  <docblock>
+    <description compact="User model">PHP version 7.0</description>
+  </docblock>
+  <extends full="Core\Model" namespace="Core" name="Model"/>
+  <member name="errors" default="" type="array" visibility="public" static="false" line="27">
+    <docblock>
+      <description compact="Error messages"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="35" end="40" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Class constructor"/>
+      <param description="Initial property values (optional)" type="array" variable="$data"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="data" byreference="false" type="array" default=""/>
+  </constructor>
+  <method name="save" start="47" end="82" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Save the user model with the current property values"/>
+      <return description="True if the user was saved, false otherwise" type="boolean"/>
+    </docblock>
+  </method>
+  <method name="validate" start="89" end="109" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Validate current property values"/>
+      <return description="True if no error occurred, false otherwise" type="boolean"/>
+    </docblock>
+    <inline>
+      <comment value="email address" line="93"/>
+    </inline>
+  </method>
+  <method name="validatePassword" start="116" end="130" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Validate current property password"/>
+      <return description="True if no error occurred, false otherwise" type="boolean"/>
+    </docblock>
+    <inline>
+      <comment value="Password" line="120"/>
+    </inline>
+  </method>
+  <method name="emailExists" start="139" end="152" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="See if a user record already exists with the specified email"/>
+      <param description="email address to search for" type="string" variable="$email"/>
+      <param description="Return false anyway if the record found has this ID" type="string" variable="$ignore_id"/>
+      <return description="True if a record already exists with the specified email, false otherwise" type="boolean"/>
+    </docblock>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+    <parameter name="ignore_id" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+  <method name="findByEmail" start="160" end="174" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Find a user model by email address"/>
+      <param description="email address to search for" type="string" variable="$email"/>
+      <return description="User object if found, false otherwise" type="mixed"/>
+    </docblock>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="delete" start="182" end="192" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Delete user"/>
+      <param description="User ID" type="string" variable="$id"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="authenticate" start="201" end="215" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Authenticate a user by email and password. User account has to be active."/>
+      <param description="email address" type="string" variable="$email"/>
+      <param description="password" type="string" variable="$password"/>
+      <return description="The user object or false if authentication fails" type="mixed"/>
+    </docblock>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+    <parameter name="password" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="findByID" start="223" end="235" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Find a user model by ID"/>
+      <param description="The user ID" type="string" variable="$id"/>
+      <return description="User object if found, false otherwise" type="mixed"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="rememberLogin" start="243" end="260" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Remember the login by inserting a new unique token into the remembered_logins table for this user record"/>
+      <return description="True if the login was remembered successfully, false otherwise" type="boolean"/>
+    </docblock>
+    <inline>
+      <comment value="30 days from now" line="248"/>
+    </inline>
+  </method>
+  <method name="sendPasswordReset" start="268" end="284" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Send password reset instructions to the user specified"/>
+      <param description="The email address" type="string" variable="$email"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="startPasswordReset" start="291" end="310" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Start the password reset process by generating a new token and expiry"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="2 hours from now" line="296"/>
+    </inline>
+  </method>
+  <method name="sendPasswordResetEmail" start="317" end="332" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Send password reset instructions in an email to the user"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="findByPasswordReset" start="340" end="365" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Find a user model by password reset token and expiry"/>
+      <param description="Password reset token sent to user" type="string" variable="$token"/>
+      <return description="User object if found and the token hasn't expired, null otherwise" type="mixed"/>
+    </docblock>
+    <parameter name="token" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="resetPassword" start="373" end="394" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Reset the password"/>
+      <param description="The new password" type="string" variable="$password"/>
+      <return description="True if the password was updated successfully, false otherwise" type="boolean"/>
+    </docblock>
+    <parameter name="password" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="sendActivationEmail" start="401" end="409" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Send an email to the user containing the activation link"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="activate" start="417" end="431" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Activate the user account with the specified activation token"/>
+      <param description="Activation token from the URL" type="string" variable="$value"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="updateProfile" start="439" end="479" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Update the user profile"/>
+      <param description="Data from the edit profile form" type="array" variable="$data"/>
+      <return description="True if the data was updated, false otherwise" type="boolean"/>
+    </docblock>
+    <parameter name="data" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Only validate and update the password if a value provided" line="443"/>
+    </inline>
+  </method>
+  <method name="updateLastLogin" start="487" end="503" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Update the users last login"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="updateLoginCount" start="510" end="521" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Increment the users login count"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getAll" start="528" end="538" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get all users"/>
+      <return description="User objects if found, null otherwise" type="mixed"/>
+    </docblock>
+  </method>
+  <parent full="Core\Model" namespace="Core" name="Model">
+    <method name="getDB" start="22" end="35" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Get the PDO User database connection"/>
+        <param description="DB name" type="string"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="dbName" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="whereLike" start="43" end="46" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+        <param description="String to convert" type="string" variable="$string"/>
+        <return description="Converted string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

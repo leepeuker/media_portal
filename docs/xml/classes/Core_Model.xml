@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Core\Model" namespace="Core" name="Model" abstract="true" final="false" start="13" end="47">
+  <file path="/var/www/media/app/Core" file="Model.php" realpath="/var/www/media/app/Core/Model.php" size="1017" time="2018-03-07T19:37:24+00:00" unixtime="1520451444" sha1="d6152571569241b55108e81f378a312a79d50da8" relative="Core/Model.php"/>
+  <docblock>
+    <description compact="Base model">PHP version 7.0</description>
+  </docblock>
+  <method name="getDB" start="22" end="35" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Get the PDO User database connection"/>
+      <param description="DB name" type="string"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="dbName" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="whereLike" start="43" end="46" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+      <param description="String to convert" type="string" variable="$string"/>
+      <return description="Converted string" type="string"/>
+    </docblock>
+    <parameter name="string" byreference="false" type="{unknown}"/>
+  </method>
+  <extenders>
+    <extender full="Models\RememberedLogin" namespace="Models" name="RememberedLogin"/>
+    <extender full="Models\Movie" namespace="Models" name="Movie"/>
+    <extender full="Models\User" namespace="Models" name="User"/>
+    <extender full="Models\Tvshow" namespace="Models" name="Tvshow"/>
+    <extender full="Models\Comic" namespace="Models" name="Comic"/>
+  </extenders>
+</class>

@@ -1,0 +1,65 @@
+{% extends 'baseNav.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block customCSS %}
+    <style>
+        .hiddenPassword{
+            margin-right: 10px;
+            border:0;
+            background-color:#e7e5e5;
+            cursor: pointer;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+
+    <form method="post" id="formProfile" action="/profile/update">
+        <div class="col-lg-6 center-block" style="float:none;display:block;margin:0 auto;">
+            <br>
+            <h2>Edit profile</h2>
+
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" name="email" class="form-control" value="{{ user.email }}" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="form-control" placeholder="Leave empty for no change" id="password">
+            </div>
+
+            {% for message in flash_messages %}
+            <div class="alert alert-{{ message.type }}" role="alert" style="margin-bottom:11px">
+                {{ message.body }}
+            </div>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-primary float-right">Save</button>
+
+        </div>
+    </form>
+
+{% endblock %}
+
+{% block footer %}
+    <script src="/js/hideShowPassword.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            /**
+             * Show password toggle button
+             */
+            $('#password').hidePassword({
+                show: false,
+                innerToggle: true,
+                toggle: {
+                    className: 'hiddenPassword',
+                }
+            });
+        });
+    </script>
+    <script src="/js/profile.js"></script>
+{% endblock %}

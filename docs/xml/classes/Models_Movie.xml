@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Models\Movie" namespace="Models" name="Movie" abstract="false" final="false" start="13" end="199">
+  <file path="/var/www/media/app/Models" file="Movie.php" realpath="/var/www/media/app/Models/Movie.php" size="5870" time="2018-03-07T19:24:17+00:00" unixtime="1520450657" sha1="5c102fd345ca698fb74bf1a060936654dba995a6" relative="Models/Movie.php"/>
+  <docblock>
+    <description compact="Movie model">PHP version 7.0</description>
+  </docblock>
+  <extends full="Core\Model" namespace="Core" name="Model"/>
+  <method name="getMany" start="26" end="53" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get multiple movies"/>
+      <param description="Searchterm for query WHERE LIKE $search" type="string" variable="$search"/>
+      <param description="Offset for query LIMIT" type="int" variable="$offset"/>
+      <param description="Number of query results" type="int" variable="$length"/>
+      <param description="Order column name" type="string" variable="$orderCol"/>
+      <param description="Order direction" type="string" variable="$orderDir"/>
+      <return description="Queried movies" type="array"/>
+    </docblock>
+    <parameter name="search" byreference="false" type="{unknown}"/>
+    <parameter name="offset" byreference="false" type="{unknown}"/>
+    <parameter name="length" byreference="false" type="{unknown}"/>
+    <parameter name="orderColName" byreference="false" type="{unknown}"/>
+    <parameter name="orderColDir" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="convert" start="62" end="80" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Convert the database output. Useless informations will be filterd out.">Missing informations will be calculated.</description>
+      <param description="Array containing the database ouput" type="array" variable="$movies"/>
+      <return description="The converted movie array" type="array"/>
+    </docblock>
+    <parameter name="movies" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCover" start="88" end="100" abstract="false" final="false" static="true" visibility="private">
+    <docblock>
+      <description compact="Check if cover exists localy, if not download it."/>
+      <param description="Cover url from image.tmdb.org" type="string" variable="$urlCover"/>
+      <return description="Cover file name" type="string"/>
+    </docblock>
+    <parameter name="urlCover" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="formatRuntime" start="108" end="111" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Format the movie runtime"/>
+      <param description="Movie runtime in seconds" type="string"/>
+      <return description="Runtime of movie in minutes" type="string"/>
+    </docblock>
+    <parameter name="runtimeSeconds" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="calcFileSize" start="120" end="128" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get the size of the movie file"/>
+      <param description="Sambapath of movie file on NAS" type="string" variable="$smbPath"/>
+      <param description="Name of the movie file" type="string" variable="$fileName"/>
+      <return description="Size of movie file in GB" type="string"/>
+    </docblock>
+    <parameter name="smbPath" byreference="false" type="{unknown}"/>
+    <parameter name="fileName" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCount" start="136" end="157" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get count of movies matching the search"/>
+      <param description="Searchterm for movies" type="string" variable="$search"/>
+      <return description="Number of matching rows" type="int"/>
+    </docblock>
+    <parameter name="search" byreference="false" type="string" default="''"/>
+  </method>
+  <method name="getFileLocation" start="165" end="182" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get file path of movie"/>
+      <param description="Searchterm for movies" type="int" variable="$search"/>
+      <return description="File path of movie" type="string"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="convertPropertyName" start="190" end="198" abstract="false" final="false" static="true" visibility="private">
+    <docblock>
+      <description compact="Convert property name to mysql column name"/>
+      <param description="Name of property" type="string" variable="$name"/>
+      <return description="Name of mysql column" type="string"/>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="Core\Model" namespace="Core" name="Model">
+    <method name="getDB" start="22" end="35" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Get the PDO User database connection"/>
+        <param description="DB name" type="string"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="dbName" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="whereLike" start="43" end="46" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+        <param description="String to convert" type="string" variable="$string"/>
+        <return description="Converted string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

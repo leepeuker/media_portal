@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block customCSS %}<link rel="stylesheet" href="/css/login.css">{% endblock %}
+
+{% block body %}
+
+    <form class="form-signin" action="/login/create" method="post">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="remember_me" value="remember-me" {% if remember_me %} checked="checked"{% endif %}> Remember me
+            </label>
+        </div>
+        {% for message in flash_messages %}
+            <div class="alert alert-{{ message.type }}" role="alert" style="margin-bottom:11px">
+                {{ message.body }}
+            </div>
+        {% endfor %}
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-bottom:2px">Login</button>
+        <a href="/password/forgot" class="float-right" style="margin-top:2px">Forgot password?</a>
+    </form>
+
+{% endblock %}

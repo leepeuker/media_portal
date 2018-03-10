@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Models\RememberedLogin" namespace="Models" name="RememberedLogin" abstract="false" final="false" start="14" end="77">
+  <file path="/var/www/media/app/Models" file="RememberedLogin.php" realpath="/var/www/media/app/Models/RememberedLogin.php" size="1805" time="2018-03-07T19:41:41+00:00" unixtime="1520451701" sha1="a5d10b622c7817d3c5595b89474daa3db953c158" relative="Models/RememberedLogin.php"/>
+  <docblock>
+    <description compact="Remembered login model">PHP version 7.0</description>
+  </docblock>
+  <extends full="Core\Model" namespace="Core" name="Model"/>
+  <method name="findByToken" start="23" end="39" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Find a remembered login model by the token"/>
+      <param description="The remembered login token" type="string" variable="$token"/>
+      <return description="Remembered login object if found, false otherwise" type="mixed"/>
+    </docblock>
+    <parameter name="token" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getUser" start="46" end="49" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the user model associated with this remembered login"/>
+      <return description="The user model" type="object">
+        <type full="Models\User" namespace="Models" name="User"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="hasExpired" start="56" end="59" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="See if the remember token has expired or not, based on the current system time"/>
+      <return description="True if the token has expired, false otherwise" type="boolean"/>
+    </docblock>
+  </method>
+  <method name="delete" start="66" end="76" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Delete this model"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <parent full="Core\Model" namespace="Core" name="Model">
+    <method name="getDB" start="22" end="35" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Get the PDO User database connection"/>
+        <param description="DB name" type="string"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="dbName" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="whereLike" start="43" end="46" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+        <param description="String to convert" type="string" variable="$string"/>
+        <return description="Converted string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

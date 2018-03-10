@@ -1,0 +1,7 @@
+Account activation
+
+This is your initial password: {{ user.password }}
+
+Please change it as soon as you can. After you logged in, click on your email address in the top right corner of the website and select "Profile" to change it.
+
+Before you can log in, you have to click here to activate your account: {{ url }}

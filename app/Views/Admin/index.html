@@ -1,0 +1,162 @@
+{% extends 'baseNav.html' %}
+
+{% block title %}Admin{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+{% endblock %}
+
+{% block main %}
+<br>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Users</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="downloads-tab" data-toggle="tab" href="#downloads" role="tab" aria-controls="downloads" aria-selected="false">Downloads</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="newComic-tab" data-toggle="tab" href="#newComic" role="tab" aria-controls="newComic" aria-selected="true">New comic</a>
+    </li>
+</ul>
+
+<br>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active table-responsive" id="users" role="tabpanel" aria-labelledby="users-tab">
+        <table id="usersTable" class="table table-striped table-hover" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Active</th>
+                    <th>Login count</th>
+                    <th>Last login</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.is_active }}</td>
+                        <td>{{ user.logincount }}</td>
+                        <td>{{ user.lastLogin }}</td>
+                        <td>
+                            {% if user.email != "lee.peuker@gmail.com" %}
+                                <form action="/admin/delete-user/{{ user.id }}" method="POST" >
+                                    <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')" type="submit">Delete</button>
+                                </form>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h4 style="padding:5px">Create new user:</h4>
+        <form action="/signup/create" method="POST">
+            <div class="input-group mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Enter email address for new user">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Create</button>
+                </div>
+            </div>
+            {% for message in flash_messages %}
+                <div class="alert alert-{{ message.type }}" role="alert" style="margin-bottom:11px">
+                    {{ message.body }}
+                </div>
+            {% endfor %}
+        </form>
+
+    </div>
+    <div class="tab-pane fade table-responsive" id="downloads" role="tabpanel" aria-labelledby="downloads-tab">
+        <table id="downloadsTable" class="table table-striped table-hover" cellspacing="0" width="100%" style="cursor:pointer">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>File</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for download in downloads %}
+                    <tr>
+                        <th scope="row">{{ download.0 }}</th>
+                        <td>{{ download.1 }}</td>
+                        <td>{{ download.2 }}</td>
+                        {% set downloadFile = download.3|split('/') %}
+                        <td>{{ downloadFile|last  }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade table-responsive" id="newComic" role="tabpanel" aria-labelledby="newComic-tab">
+        <form action="comics/new" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" name="title" id="title">
+            </div>
+            <div class="form-group">
+                <label for="plot">Plot:</label>
+                <textarea  type="text-area" class="form-control" rows="5" name="plot" id="plot"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="publisher">Publisher:</label>
+                <input type="text" class="form-control" name="publisher" id="publisher">
+            </div>
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="number" class="form-control" name="year" id="year">
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" name="price" id="price">
+            </div>
+            <div class="form-group">
+                <label for="coverFileName">Cover file name:</label>
+                <input type="text" class="form-control" name="coverFileName" id="coverFileName">
+            </div>
+            <div class="form-group">
+                <label for="fileCover">Cover:</label>
+                <input type="file" name="fileCover" id="fileCover">
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Submit</button>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="/js/jquery.tablesorter.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#usersTable').DataTable( {
+        "order": [[ 3, "desc" ]],
+        "columnDefs": [
+            { 
+                "targets": 4,
+                "orderable": false
+            }
+        ],
+        "buttons": [
+        'copy', 'excel', 'pdf'
+        ]
+    } );
+    $('#downloadsTable').DataTable( {
+        "order": [[ 0, "desc" ]]
+    } );
+} );
+</script>
+{% endblock %}

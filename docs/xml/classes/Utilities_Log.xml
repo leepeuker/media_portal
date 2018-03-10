@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Utilities\Log" namespace="Utilities" name="Log" abstract="false" final="false" start="12" end="65">
+  <file path="/var/www/media/app/Utilities" file="Log.php" realpath="/var/www/media/app/Utilities/Log.php" size="1350" time="2018-03-07T19:43:58+00:00" unixtime="1520451838" sha1="c7b2642327cee45cc5f57c633b6c8beb3fc5ce6b" relative="Utilities/Log.php"/>
+  <docblock>
+    <description compact="Base Log">PHP version 7.0</description>
+  </docblock>
+  <method name="write" start="22" end="28" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Write to custom error log"/>
+      <param description="The message to write in logfile" type="string"/>
+      <param description="Log type, default INFO" type="string"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="message" byreference="false" type="{unknown}"/>
+    <parameter name="type" byreference="false" type="string" default="'INFO'"/>
+  </method>
+  <method name="download" start="35" end="41" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Log download from user"/>
+      <param description="The file path" type="string"/>
+    </docblock>
+    <parameter name="fileLocation" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getDownload" start="48" end="64" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get the log content of the download log"/>
+      <param description="The file path" type="string"/>
+    </docblock>
+  </method>
+</class>

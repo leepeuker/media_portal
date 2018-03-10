@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Core\Config" namespace="Core" name="Config" abstract="false" final="false" start="10" end="73">
+  <file path="/var/www/media/app/Core" file="Config.php" realpath="/var/www/media/app/Core/Config.php" size="1344" time="2018-03-07T19:38:19+00:00" unixtime="1520451499" sha1="1ede1d7c430b6ce4ba4aa1860063609e0034ed34" relative="Core/Config.php"/>
+  <docblock>
+    <description compact="Application configuration">PHP version 7.0</description>
+  </docblock>
+  <member name="config" default="" type="array" visibility="private" static="true" line="16">
+    <docblock>
+      <description compact="Array of configurations"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <method name="get" start="24" end="27" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get default configuration value(s)"/>
+      <param type="string" variable="$key"/>
+      <return type="object">
+        <type full="Core\string|array|null" namespace="Core" name="string|array|null"/>
+      </return>
+    </docblock>
+    <parameter name="key" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="set" start="34" end="37" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Set or add a default configuration value"/>
+      <param type="string" variable="$key"/>
+    </docblock>
+    <parameter name="key" byreference="false" type="{unknown}"/>
+    <parameter name="value" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="_get" start="47" end="72" abstract="false" final="false" static="true" visibility="private">
+    <docblock>
+      <description compact="Get a configuration value(s)"/>
+      <param type="string" variable="$key"/>
+      <param type="string" variable="$source"/>
+      <return type="object">
+        <type full="Core\string|null" namespace="Core" name="string|null"/>
+      </return>
+      <throws description="if configuration file doesn't exist" type="object">
+        <type full="Core\Exception" namespace="Core" name="Exception"/>
+      </throws>
+    </docblock>
+    <parameter name="key" byreference="false" type="{unknown}"/>
+  </method>
+</class>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Models\Comic" namespace="Models" name="Comic" abstract="false" final="false" start="13" end="116">
+  <file path="/var/www/media/app/Models" file="Comic.php" realpath="/var/www/media/app/Models/Comic.php" size="3358" time="2018-03-07T19:41:14+00:00" unixtime="1520451674" sha1="1c18c3cd5a2e07883ea0acc51316866997b81111" relative="Models/Comic.php"/>
+  <docblock>
+    <description compact="Comic model">PHP version 7.0</description>
+  </docblock>
+  <extends full="Core\Model" namespace="Core" name="Model"/>
+  <method name="getMany" start="27" end="43" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get multiple comics"/>
+      <param description="Searchterm for query WHERE LIKE" type="string" variable="$search"/>
+      <param description="Offset for query LIMIT" type="int" variable="$offset"/>
+      <param description="Number of query results" type="int" variable="$length"/>
+      <param description="Order column name" type="string" variable="$orderCol"/>
+      <param description="Order direction" type="string" variable="$orderDir"/>
+      <return description="Queried comics metadata" type="array"/>
+    </docblock>
+    <parameter name="search" byreference="false" type="{unknown}"/>
+    <parameter name="offset" byreference="false" type="{unknown}"/>
+    <parameter name="length" byreference="false" type="{unknown}"/>
+    <parameter name="orderCol" byreference="false" type="{unknown}"/>
+    <parameter name="orderDir" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCount" start="51" end="68" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get count of comics matching the search"/>
+      <param description="Searchterm for query WHERE LIKE" type="string" variable="$search"/>
+      <return description="Number of matching rows" type="int"/>
+    </docblock>
+    <parameter name="search" byreference="false" type="string" default="''"/>
+  </method>
+  <method name="new" start="76" end="97" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Create new comic"/>
+      <param description="Post form data" type="array"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="comicData" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="delete" start="105" end="115" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Delete a comic"/>
+      <param description="Comic id" type="int" variable="$id"/>
+      <return type="object">
+        <type full="Models\void" namespace="Models" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="Core\Model" namespace="Core" name="Model">
+    <method name="getDB" start="22" end="35" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Get the PDO User database connection"/>
+        <param description="DB name" type="string"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="dbName" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="whereLike" start="43" end="46" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+        <param description="String to convert" type="string" variable="$string"/>
+        <return description="Converted string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

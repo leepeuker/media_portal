@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Core\Error" namespace="Core" name="Error" abstract="false" final="false" start="10" end="64">
+  <file path="/var/www/media/app/Core" file="Error.php" realpath="/var/www/media/app/Core/Error.php" size="2043" time="2018-03-07T19:37:38+00:00" unixtime="1520451458" sha1="6006a28ad0ae624eab21a589f5a29cd1aedb20a3" relative="Core/Error.php"/>
+  <docblock>
+    <description compact="Error and exception handler">PHP version 7.0</description>
+  </docblock>
+  <method name="errorHandler" start="22" end="27" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Error handler. Convert all errors to Exceptions by throwing an ErrorException."/>
+      <param description="Error level" type="int" variable="$level"/>
+      <param description="Error message" type="string" variable="$message"/>
+      <param description="Filename the error was raised in" type="string" variable="$file"/>
+      <param description="Line number in the file" type="int" variable="$line"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="level" byreference="false" type="{unknown}"/>
+    <parameter name="message" byreference="false" type="{unknown}"/>
+    <parameter name="file" byreference="false" type="{unknown}"/>
+    <parameter name="line" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="exceptionHandler" start="35" end="63" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Exception handler."/>
+      <param description="The exception" type="object" variable="$exception">
+        <type full="Core\Exception" namespace="Core" name="Exception"/>
+      </param>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="exception" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Code is 404 (not found) or 500 (general error)" line="37"/>
+    </inline>
+  </method>
+</class>

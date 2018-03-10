@@ -1,0 +1,85 @@
+{% extends 'baseNav.html' %}
+
+{% block title %}Movies{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+{% endblock %}
+
+{% block main %}		
+<br>
+<div class="table-responsive"  sytle="padding-left:0px">
+    <table id="movieTable" class="table table-striped table-hover" cellspacing="0" style="cursor:pointer">
+        <thead>
+            <tr>
+                <th style="cursor:default">Cover</th>
+                <th>Movie</th>
+                <th>Year</th>
+                <th>IMDB</th>
+                <th>Added</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<br>
+
+<div class="modal" tabindex="-1" role="dialog" id="movieDetails">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="detailsTitle"></h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" id="tabCover"><a href="#cover" class="nav-link active" role="tab" data-toggle="tab">Cover</a></li>
+                    <li class="nav-item" id="tabMovieInfo"><a href="#movieInfo" class="nav-link" role="tab" data-toggle="tab">Movie</a></li>
+                    <li class="nav-item" id="tabFileInfo"><a href="#fileInfo" class="nav-link" role="tab" data-toggle="tab">File</a></li>
+                </ul>
+                <div class="tab-content" style="padding-top:10px">
+                    <div class="tab-pane" id="cover" role="tabpanel">
+                        <img src="" id="coverImage" style="width:100%;"/>
+                    </div>
+                    <div class="tab-pane" id="movieInfo" role="tabpanel">
+                        <b>Director: </b>
+                        <p id="detailsDirector"></p>
+                        <b>Studio: </b>
+                        <p id="detailsStudio"></p>
+                        <b>Genre: </b>
+                        <p id="detailsGenre"></p>
+                        <b>Runtime: </b>
+                        <p id="detailsRuntime"></p>
+                        <b>Plot: </b>
+                        <p id="detailsPlot" style="word-wrap: break-word;"></p>
+                        <b>Trailer: </b>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" id="trailer" src="" style="padding-top:5px"></iframe>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="fileInfo" role="tabpanel">
+                        <b>Filename: </b>
+                        <p id="detailsFilename" style="word-wrap: break-word;"></p>
+                        <b>File size: </b>
+                        <p id="detailsFileSize"></p>
+                        <b>Date added: </b>
+                        <p id="detailsDateAdded"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary mr-auto" href="" id="downloadLink">Download</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="/js/movie.js"></script>
+{% endblock %}

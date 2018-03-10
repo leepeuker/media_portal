@@ -1,0 +1,19 @@
+<div class="panel-group" id="accordion">
+    {% for season in seasons %}
+        <div class="card" style="margin-top:10px">
+            <div class="card-body" data-toggle="collapse" data-parent="#accordion" data-target="#collapseSeason{{ loop.index }}" style="padding:10px 0px 10px 15px;cursor:pointer">
+                    <h5 class="accordion-toggl card-title" style="margin:0px">Season {{ loop.index }}<span class="glyphicon glyphicon-chevron-down pull-right"></span></h5>
+            </div>
+            <div id="collapseSeason{{ loop.index }}" class="panel-collapse collapse">
+                <ul class="list-group list-group-flush">
+                    {% for episode in season %}
+                        <li class="list-group-item">
+                            <a href="tvshows/download/{{ episode.idFile }}">S{% if loop.parent.loop.index < 10 %}0{% endif %}{{ loop.parent.loop.index }}E{% if loop.index < 10 %}0{% endif %}{{ loop.index }} | {{ episode.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>   
+            </div>
+        </div>
+    {% endfor %}
+    <br>
+</div>

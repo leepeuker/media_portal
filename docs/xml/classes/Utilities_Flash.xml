@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Utilities\Flash" namespace="Utilities" name="Flash" abstract="false" final="false" start="11" end="96">
+  <file path="/var/www/media/app/Utilities" file="Flash.php" realpath="/var/www/media/app/Utilities/Flash.php" size="2133" time="2018-03-07T19:43:51+00:00" unixtime="1520451831" sha1="348a1e2b5b3320cc1398c9d6c27882f8b32f2700" relative="Utilities/Flash.php"/>
+  <docblock>
+    <description compact="Flash notification messages: messages for one-time display using the session for storage between requests.">PHP version 7.0</description>
+  </docblock>
+  <constant type="string" name="SUCCESS" value="'success'">
+    <docblock>
+      <description compact="Success message type"/>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="INFO" value="'info'">
+    <docblock>
+      <description compact="Information message type"/>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="WARNING" value="'warning'">
+    <docblock>
+      <description compact="Warning message type"/>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <constant type="string" name="ERROR" value="'danger'">
+    <docblock>
+      <description compact="Error message type"/>
+      <var type="string"/>
+    </docblock>
+  </constant>
+  <method name="addMessage" start="46" end="58" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="message" byreference="false" type="{unknown}"/>
+    <parameter name="type" byreference="false" type="string" default="'success'"/>
+    <inline>
+      <comment value="Create array in the session if it doesn't already exist" line="48"/>
+      <comment value="Append the message to the array" line="53"/>
+    </inline>
+  </method>
+  <method name="getMessages" start="65" end="74" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get all the messages"/>
+      <return description="An array with all the messages or null if none set" type="mixed"/>
+    </docblock>
+  </method>
+  <method name="isErrorMsg" start="81" end="95" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Check if an error message is set"/>
+      <return description="True if an error message is set, false otherwise" type="boolean"/>
+    </docblock>
+  </method>
+</class>

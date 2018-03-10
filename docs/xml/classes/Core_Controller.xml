@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Core\Controller" namespace="Core" name="Controller" abstract="true" final="false" start="14" end="222">
+  <file path="/var/www/media/app/Core" file="Controller.php" realpath="/var/www/media/app/Core/Controller.php" size="5277" time="2018-03-07T19:37:53+00:00" unixtime="1520451473" sha1="7a44dc8e23b407a58ffbb1bcb2e3a15ef3db5ec0" relative="Core/Controller.php"/>
+  <docblock>
+    <description compact="Base controller">PHP version 7.0</description>
+  </docblock>
+  <member name="request" default="NULL" visibility="protected" static="false" line="21">
+    <docblock>
+      <description compact="Parameters from the matched route"/>
+      <var type="object">
+        <type full="Core\Request" namespace="Core" name="Request"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="datatablesReq" default="" type="array" visibility="protected" static="false" line="27">
+    <docblock>
+      <description compact="Parameters from the datatable request"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="34" end="37" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Class constructor"/>
+      <param description="Request object" type="object" variable="$request">
+        <type full="Core\Request" namespace="Core" name="Request"/>
+      </param>
+    </docblock>
+    <parameter name="request" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="__call" start="50" end="63" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Magic method called when a non-existent or inaccessible method is called on an object of this class. Used to execute before and after filter methods on action methods. Action methods need to be named with an &quot;Action&quot; suffix, e.g. indexAction, showAction etc."/>
+      <access value="public"/>
+      <param description="Method name" type="string" variable="$name"/>
+      <param description="Arguments passed to the method" type="array" variable="$args"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="args" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="before" start="70" end="70" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Before filter - called before any action method."/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="after" start="77" end="77" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="After filter - called after any action method."/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="redirect" start="86" end="90" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Redirect to a different page"/>
+      <access value="public"/>
+      <param description="The relative URL" type="string" variable="$url"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="url" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="requireLogin" start="98" end="106" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Require the user to be logged in before giving access to the requested page."/>
+      <access value="public"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="requireNoLogin" start="114" end="120" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Require the user not to be logged in before giving access to the requested page."/>
+      <access value="public"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="startDownload" start="130" end="160" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Start a download"/>
+      <access value="protected"/>
+      <param description="File location" type="string" variable="$file"/>
+      <param description="MIME type of file" type="string" variable="$contentType"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="file" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getMimeType" start="169" end="197" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Get mime type"/>
+      <access value="protected"/>
+      <param description="File location" type="string" variable="$file"/>
+      <return description="Mime type of file" type="string"/>
+    </docblock>
+    <parameter name="file" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="convertDatatablesRequest" start="206" end="221" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Get mime type"/>
+      <access value="protected"/>
+      <param description="File location" type="string" variable="$file"/>
+      <return description="Mime type of file" type="string"/>
+    </docblock>
+  </method>
+  <extenders>
+    <extender full="Controllers\Comics" namespace="Controllers" name="Comics"/>
+    <extender full="Controllers\Signup" namespace="Controllers" name="Signup"/>
+    <extender full="Controllers\Movies" namespace="Controllers" name="Movies"/>
+    <extender full="Controllers\Profile" namespace="Controllers" name="Profile"/>
+    <extender full="Controllers\Admin" namespace="Controllers" name="Admin"/>
+    <extender full="Controllers\Login" namespace="Controllers" name="Login"/>
+    <extender full="Controllers\Authenticated" namespace="Controllers" name="Authenticated"/>
+    <extender full="Controllers\Password" namespace="Controllers" name="Password"/>
+    <extender full="Controllers\Logout" namespace="Controllers" name="Logout"/>
+    <extender full="Controllers\Tvshows" namespace="Controllers" name="Tvshows"/>
+  </extenders>
+</class>

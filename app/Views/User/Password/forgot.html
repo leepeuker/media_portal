@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Forgot password{% endblock %}
+{% block customCSS %}<link rel="stylesheet" href="/css/login.css">{% endblock %}
+
+{% block body %}
+
+    <form class="form-signin" action="/password/request-reset" method="post">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" style="margin-bottom:1em" placeholder="Enter email address" required autofocus>
+        {% for message in flash_messages %}
+            <div class="alert alert-{{ message.type }}" style="margin-top:1em" role="alert">
+                {{ message.body }}
+            </div>
+        {% endfor %}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Request password reset</button>
+        <a href="/" class="float-right" style="margin-top:3px">Back</a>
+    </form>
+
+{% endblock %}

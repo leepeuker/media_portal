@@ -1,0 +1,70 @@
+{% extends 'baseNav.html' %}
+
+{% block title %}TV Shows{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+{% endblock %}
+
+{% block main %}		
+<br>
+<div class="table-responsive">
+    <table id="tvshowTable" class="table table-striped table-hover" cellspacing="0" width="100%" style="cursor:pointer">
+        <thead>
+            <tr>
+                <th style="cursor:default">Cover</th>
+                <th>TV Shows</th>
+                <th>Year</th>
+                <th>Rating</th>
+                <th>Added</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<br>
+
+<div class="modal " tabindex="-1" role="dialog" id="tvshowDetails">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="detailsTitle"></h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" id="tabs">
+                    <li class="nav-item" id="tabCover"><a class="nav-link active" role="tab" data-toggle="tab" href="#cover">Cover</a></li>
+                    <li class="nav-item" id="tabCover"><a class="nav-link" role="tab" data-toggle="tab" href="#tvshowInfo">TV Show</a></li>
+                    <li class="nav-item" id="tabCover"><a class="nav-link" role="tab" data-toggle="tab" href="#episodesInfo">Episodes</a></li>
+                </ul>
+                <div class="tab-content" id="">
+                    <div id="cover" class="tab-pane shown active" style="padding-top:10px">
+                        <img src="" id="coverImage" style="width:100%;"/>
+                    </div>
+                    <div id="tvshowInfo" class="tab-pane" style="padding-top:10px">
+                        <input type="hidden" id="tvshowID" />
+                        <b>Studio: </b>
+                        <p id="detailsStudio"></p>
+                        <b>Genre: </b>
+                        <p id="detailsGenre"></p>
+                        <b>Plot: </b>
+                        <p id="detailsPlot" style="word-wrap: break-word;"></p>
+                    </div>
+                    <div id="episodesInfo" class="tab-pane" style="padding-top:10px">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="/js/tvshows.js"></script>
+{% endblock %}

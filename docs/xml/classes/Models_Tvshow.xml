@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Models\Tvshow" namespace="Models" name="Tvshow" abstract="false" final="false" start="13" end="195">
+  <file path="/var/www/media/app/Models" file="Tvshow.php" realpath="/var/www/media/app/Models/Tvshow.php" size="5347" time="2018-03-07T19:42:25+00:00" unixtime="1520451745" sha1="03426ca9b1bd279f94d809533ee56fedf92e86a1" relative="Models/Tvshow.php"/>
+  <docblock>
+    <description compact="Tvshow model">PHP version 7.0</description>
+  </docblock>
+  <extends full="Core\Model" namespace="Core" name="Model"/>
+  <method name="getMany" start="26" end="51" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get multiple tvshows"/>
+      <param description="Searchterm for query WHERE LIKE $search" type="string" variable="$search"/>
+      <param description="Offset for query LIMIT" type="int" variable="$offset"/>
+      <param description="Number of query results" type="int" variable="$length"/>
+      <param description="Order column name" type="string" variable="$orderCol"/>
+      <param description="Order direction" type="string" variable="$orderDir"/>
+      <return description="Queried tvshows" type="array"/>
+    </docblock>
+    <parameter name="search" byreference="false" type="{unknown}"/>
+    <parameter name="offset" byreference="false" type="{unknown}"/>
+    <parameter name="length" byreference="false" type="{unknown}"/>
+    <parameter name="orderColName" byreference="false" type="{unknown}"/>
+    <parameter name="orderDir" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="convert" start="60" end="72" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Convert the database output. Useless informations will be filterd out.">Missing informations will be calculated.</description>
+      <param description="Array containing the database ouput" type="array" variable="$tvshows"/>
+      <return description="The converted tvshow array" type="array"/>
+    </docblock>
+    <parameter name="tvshows" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCover" start="80" end="91" abstract="false" final="false" static="true" visibility="private">
+    <docblock>
+      <description compact="Check if cover exists localy, if not download it"/>
+      <param description="Cover url remote server" type="string"/>
+      <return description="Cover Local file name" type="string"/>
+    </docblock>
+    <parameter name="urlCover" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCount" start="99" end="115" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get count of tvshows matching the search"/>
+      <param description="Searchterm for tvshow" type="string" variable="$search"/>
+      <return description="Number of matching rows" type="int"/>
+    </docblock>
+    <parameter name="search" byreference="false" type="string" default="''"/>
+  </method>
+  <method name="getEpisodes" start="123" end="150" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get episodes of tvshow"/>
+      <param description="ID of tvshow" type="int"/>
+      <return description="Queried episodes" type="array"/>
+    </docblock>
+    <parameter name="tvshowID" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getFileLocation" start="158" end="174" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get file path of episode of tvshow"/>
+      <param description="ID of episode of tvshow" type="int" variable="$id"/>
+      <return description="File path of episode" type="string"/>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="convertPropertyName" start="182" end="194" abstract="false" final="false" static="true" visibility="private">
+    <docblock>
+      <description compact="Convert property name to mysql column name"/>
+      <param description="Name of property" type="string" variable="$name"/>
+      <return description="Name of mysql column" type="string"/>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="Core\Model" namespace="Core" name="Model">
+    <method name="getDB" start="22" end="35" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Get the PDO User database connection"/>
+        <param description="DB name" type="string"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="dbName" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="whereLike" start="43" end="46" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+        <param description="String to convert" type="string" variable="$string"/>
+        <return description="Converted string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

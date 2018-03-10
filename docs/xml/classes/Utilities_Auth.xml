@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Utilities\Auth" namespace="Utilities" name="Auth" abstract="false" final="false" start="13" end="147">
+  <file path="/var/www/media/app/Utilities" file="Auth.php" realpath="/var/www/media/app/Utilities/Auth.php" size="3315" time="2018-03-07T19:43:10+00:00" unixtime="1520451790" sha1="4ea717c5b3c5d3fc5686fb631d789663faf3dc5d" relative="Utilities/Auth.php"/>
+  <docblock>
+    <description compact="Authentication">PHP version 7.0</description>
+  </docblock>
+  <method name="login" start="22" end="37" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Login the user"/>
+      <param description="The user model" type="object" variable="$user">
+        <type full="Models\User" namespace="Models" name="User"/>
+      </param>
+      <param description="Remember the login if true" type="boolean" variable="$remember_me"/>
+      <return type="object">
+        <type full="Utilities\void" namespace="Utilities" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="user" byreference="false" type="{unknown}"/>
+    <parameter name="remember_me" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="logout" start="44" end="66" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Logout the user"/>
+      <return type="object">
+        <type full="Utilities\void" namespace="Utilities" name="void"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="Unset all of the session variables" line="46"/>
+      <comment value="Delete the session cookie" line="49"/>
+    </inline>
+  </method>
+  <method name="rememberRequestedPage" start="73" end="76" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Remember the originally-requested page in the session"/>
+      <return type="object">
+        <type full="Utilities\void" namespace="Utilities" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getReturnToPage" start="83" end="86" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get the originally requested page to return to after requiring login, or default to the homepage"/>
+      <return type="object">
+        <type full="Utilities\void" namespace="Utilities" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="getUser" start="93" end="103" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get the current logged-in user, from the session or the remember-me cookie"/>
+      <return description="The user model or null if not logged in" type="mixed"/>
+    </docblock>
+  </method>
+  <method name="loginFromRememberCookie" start="110" end="126" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Login the user from a remembered login cookie"/>
+      <return description="The user model if login cookie found; null otherwise" type="mixed"/>
+    </docblock>
+  </method>
+  <method name="forgetLogin" start="133" end="146" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Forget the remembered login, if present"/>
+      <return type="object">
+        <type full="Utilities\void" namespace="Utilities" name="void"/>
+      </return>
+    </docblock>
+  </method>
+</class>

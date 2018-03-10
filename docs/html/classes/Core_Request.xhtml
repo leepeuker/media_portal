@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Core\Request</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Core">Core</a>
+          </li>
+          <li class="separator">Request</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Core/Request.php.xhtml#line10">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Core\</small>Request</h1>
+        <h4>App</h4>
+        <p>PHP version 7.0</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Request
+            {<br/><ul class="none"><li>// members</li><li>private array <a href="#members">$data</a> =
+                        ;
+                    </li><li>private array <a href="#members">$query</a> =
+                        ;
+                    </li><li>public array <a href="#members">$params</a> =
+                        ;
+                    </li><li>private  <a href="#members">$url</a> =
+                        NULL;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Core\Request" href="../classes/Core_Request/__construct.xhtml">__construct</a>()
+                    </li><li>private array <a title="Core\Request" href="../classes/Core_Request/mergeData.xhtml">mergeData</a>()
+                    </li><li>public mixed <a title="Core\Request" href="../classes/Core_Request/countData.xhtml">countData</a>()
+                    </li><li>public mixed <a title="Core\Request" href="../classes/Core_Request/data.xhtml">data</a>()
+                    </li><li>public mixed <a title="Core\Request" href="../classes/Core_Request/query.xhtml">query</a>()
+                    </li><li>public mixed <a title="Core\Request" href="../classes/Core_Request/params.xhtml">params</a>()
+                    </li><li>public boolean <a title="Core\Request" href="../classes/Core_Request/isAjax.xhtml">isAjax</a>()
+                    </li><li>public boolean <a title="Core\Request" href="../classes/Core_Request/isPost.xhtml">isPost</a>()
+                    </li><li>public boolean <a title="Core\Request" href="../classes/Core_Request/isGet.xhtml">isGet</a>()
+                    </li><li>public boolean <a title="Core\Request" href="../classes/Core_Request/isSSL.xhtml">isSSL</a>()
+                    </li><li>public integer <a title="Core\Request" href="../classes/Core_Request/contentLength.xhtml">contentLength</a>()
+                    </li><li>public string|null <a title="Core\Request" href="../classes/Core_Request/uri.xhtml">uri</a>()
+                    </li><li>public string|null <a title="Core\Request" href="../classes/Core_Request/name.xhtml">name</a>()
+                    </li><li>public string|null <a title="Core\Request" href="../classes/Core_Request/referer.xhtml">referer</a>()
+                    </li><li>public string|null <a title="Core\Request" href="../classes/Core_Request/clientIp.xhtml">clientIp</a>()
+                    </li><li>public string|null <a title="Core\Request" href="../classes/Core_Request/userAgent.xhtml">userAgent</a>()
+                    </li><li>public string <a title="Core\Request" href="../classes/Core_Request/protocol.xhtml">protocol</a>()
+                    </li><li>public string <a title="Core\Request" href="../classes/Core_Request/getProtocolAndHost.xhtml">getProtocolAndHost</a>()
+                    </li><li>public string <a title="Core\Request" href="../classes/Core_Request/url.xhtml">url</a>()
+                    </li><li>public string <a title="Core\Request" href="../classes/Core_Request/urlWithoutProtocol.xhtml">urlWithoutProtocol</a>()
+                    </li><li>public string <a title="Core\Request" href="../classes/Core_Request/getBaseUrl.xhtml">getBaseUrl</a>()
+                    </li><li>public string <a title="Core\Request" href="../classes/Core_Request/root.xhtml">root</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="data"><strong>$data</strong>
+                —
+                array<br/><span class="indent">POST data as well as uploaded files</span></li>
+            <li id="query"><strong>$query</strong>
+                —
+                array<br/><span class="indent">Query string arguments</span></li>
+            <li id="url"><strong>$url</strong>
+                —
+                string<br/><span class="indent">The URL used to make the request.</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="params"><strong>$params</strong>
+                —
+                array<br/><span class="indent">Parameters from the matched route</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="mergeData"><a title="Core\Request" href="../classes/Core_Request/mergeData.xhtml">mergeData()</a>
+                — merge post and files data You shouldn't have two fields with the same 'name' attribute in $_POST &amp; $_FILES</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Core\Request" href="../classes/Core_Request/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="clientIp"><a title="Core\Request" href="../classes/Core_Request/clientIp.xhtml">clientIp()</a>
+                — Fet the client IP addresses.</li>
+            <li id="contentLength"><a title="Core\Request" href="../classes/Core_Request/contentLength.xhtml">contentLength()</a>
+                — Get content length</li>
+            <li id="countData"><a title="Core\Request" href="../classes/Core_Request/countData.xhtml">countData()</a>
+                — Count fields in $this-&gt;data and optionally exclude some fields</li>
+            <li id="data"><a title="Core\Request" href="../classes/Core_Request/data.xhtml">data()</a>
+                — Safer and better access to $this-&gt;data</li>
+            <li id="getBaseUrl"><a title="Core\Request" href="../classes/Core_Request/getBaseUrl.xhtml">getBaseUrl()</a>
+                — Returns the base URL.</li>
+            <li id="getProtocolAndHost"><a title="Core\Request" href="../classes/Core_Request/getProtocolAndHost.xhtml">getProtocolAndHost()</a>
+                — Get the protocol and HTTP host</li>
+            <li id="isAjax"><a title="Core\Request" href="../classes/Core_Request/isAjax.xhtml">isAjax()</a>
+                — detect if request is Ajax</li>
+            <li id="isGet"><a title="Core\Request" href="../classes/Core_Request/isGet.xhtml">isGet()</a>
+                — detect if request is GET request</li>
+            <li id="isPost"><a title="Core\Request" href="../classes/Core_Request/isPost.xhtml">isPost()</a>
+                — detect if request is POST request</li>
+            <li id="isSSL"><a title="Core\Request" href="../classes/Core_Request/isSSL.xhtml">isSSL()</a>
+                — Detect if request over secured connection(SSL)</li>
+            <li id="name"><a title="Core\Request" href="../classes/Core_Request/name.xhtml">name()</a>
+                — Get the name of the server host</li>
+            <li id="params"><a title="Core\Request" href="../classes/Core_Request/params.xhtml">params()</a>
+                — safer and better access to $this-&gt;params</li>
+            <li id="protocol"><a title="Core\Request" href="../classes/Core_Request/protocol.xhtml">protocol()</a>
+                — Get the request protocol.</li>
+            <li id="query"><a title="Core\Request" href="../classes/Core_Request/query.xhtml">query()</a>
+                — Safer and better access to $this-&gt;query</li>
+            <li id="referer"><a title="Core\Request" href="../classes/Core_Request/referer.xhtml">referer()</a>
+                — Get the referer of this request.</li>
+            <li id="root"><a title="Core\Request" href="../classes/Core_Request/root.xhtml">root()</a>
+                — Get the root URL for the application.</li>
+            <li id="uri"><a title="Core\Request" href="../classes/Core_Request/uri.xhtml">uri()</a>
+                — Get the current uri of the request (without query variables)</li>
+            <li id="url"><a title="Core\Request" href="../classes/Core_Request/url.xhtml">url()</a>
+                — Get the full URL for the request with the added query string parameters</li>
+            <li id="urlWithoutProtocol"><a title="Core\Request" href="../classes/Core_Request/urlWithoutProtocol.xhtml">urlWithoutProtocol()</a>
+                — Get the full URL for the request without the protocol.</li>
+            <li id="userAgent"><a title="Core\Request" href="../classes/Core_Request/userAgent.xhtml">userAgent()</a>
+                — Get the contents of the User Agent</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2018 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

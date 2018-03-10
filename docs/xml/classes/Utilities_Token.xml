@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Utilities\Token" namespace="Utilities" name="Token" abstract="false" final="false" start="10" end="56">
+  <file path="/var/www/media/app/Utilities" file="Token.php" realpath="/var/www/media/app/Utilities/Token.php" size="1061" time="2018-03-07T19:44:20+00:00" unixtime="1520451860" sha1="fb43922cda1d749571c80041db0695928e86f217" relative="Utilities/Token.php"/>
+  <docblock>
+    <description compact="Unique random tokens">PHP version 7.0</description>
+  </docblock>
+  <member name="token" visibility="protected" static="false" line="17">
+    <docblock>
+      <description compact="The token value"/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="25" end="35" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Class constructor. Create a new random token or assign an existing one if passed in."/>
+      <param description="(optional) A token value" type="string" variable="$value"/>
+      <return description="A 32-character token" type="string"/>
+    </docblock>
+    <parameter name="token_value" byreference="false" type="{unknown}" default="NULL"/>
+  </constructor>
+  <method name="getValue" start="42" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the token value"/>
+      <return description="The value" type="string"/>
+    </docblock>
+  </method>
+  <method name="getHash" start="52" end="55" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the hashed token value"/>
+      <return description="The hashed value" type="string"/>
+    </docblock>
+    <inline>
+      <comment value="sha256 = 64 chars" line="54"/>
+    </inline>
+  </method>
+</class>

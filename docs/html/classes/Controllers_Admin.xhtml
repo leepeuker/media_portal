@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Controllers\Admin</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Controllers">Controllers</a>
+          </li>
+          <li class="separator">Admin</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Controllers/Admin.php.xhtml#line14">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Controllers\</small>Admin</h1>
+        <h4>Login controller</h4>
+        <p>PHP version 7.0</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Admin
+                extends <a title="Controllers\Authenticated" href="../classes/Controllers_Authenticated.xhtml">Authenticated</a>
+            {<br/><ul class="none"><li>// Inherited members from <span title="Core\Controller">Controller</span></li><li>protected <span title="Core\Request">Request</span> <a href="#members">$request</a>;
+                        </li><li>protected array <a href="#members">$datatablesReq</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="Controllers\Admin" href="../classes/Controllers_Admin/before.xhtml">before</a>()
+                    </li><li>public void <a title="Controllers\Admin" href="../classes/Controllers_Admin/indexAction.xhtml">indexAction</a>()
+                    </li><li>public void <a title="Controllers\Admin" href="../classes/Controllers_Admin/deleteUserAction.xhtml">deleteUserAction</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Controllers\Authenticated">Authenticated</span></li><li>protected void <a title="Controllers\Authenticated" href="../classes/Controllers_Authenticated/before.xhtml">before</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Core\Controller">Controller</span></li><li>public void <a title="Core\Controller" href="../classes/Core_Controller/__construct.xhtml">__construct</a>()
+                        </li><li>public void <a title="Core\Controller" href="../classes/Core_Controller/__call.xhtml">__call</a>()
+                        </li><li>protected void <a title="Core\Controller" href="../classes/Core_Controller/before.xhtml">before</a>()
+                        </li><li>protected void <a title="Core\Controller" href="../classes/Core_Controller/after.xhtml">after</a>()
+                        </li><li>public void <a title="Core\Controller" href="../classes/Core_Controller/redirect.xhtml">redirect</a>()
+                        </li><li>public void <a title="Core\Controller" href="../classes/Core_Controller/requireLogin.xhtml">requireLogin</a>()
+                        </li><li>public void <a title="Core\Controller" href="../classes/Core_Controller/requireNoLogin.xhtml">requireNoLogin</a>()
+                        </li><li>protected void <a title="Core\Controller" href="../classes/Core_Controller/startDownload.xhtml">startDownload</a>()
+                        </li><li>protected string <a title="Core\Controller" href="../classes/Core_Controller/getMimeType.xhtml">getMimeType</a>()
+                        </li><li>protected string <a title="Core\Controller" href="../classes/Core_Controller/convertDatatablesRequest.xhtml">convertDatatablesRequest</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Controllers\Authenticated" href="../classes/Controllers_Authenticated.xhtml">Controllers\Authenticated</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="datatablesReq"><strong>$datatablesReq</strong>
+                —
+                array<br/><span class="indent">Parameters from the datatable request</span></li>
+            <li id="request"><strong>$request</strong>
+                —
+                <a title="Core\Request" href="../classes/Core_Request.xhtml">Core\Request</a><br/><span class="indent">Parameters from the matched route</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="before"><a title="Controllers\Admin" href="../classes/Controllers_Admin/before.xhtml">before()</a>
+                — Before filter - called before any action method.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="deleteUserAction"><a title="Controllers\Admin" href="../classes/Controllers_Admin/deleteUserAction.xhtml">deleteUserAction()</a>
+                — Delete user profile</li>
+            <li id="indexAction"><a title="Controllers\Admin" href="../classes/Controllers_Admin/indexAction.xhtml">indexAction()</a>
+                — Show the login page</li>
+          </ul>
+          <h3>Inherited from <a title="Controllers\Authenticated" href="../classes/Controllers_Authenticated.xhtml">Controllers\Authenticated</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="before"><a title="Controllers\Authenticated" href="../classes/Controllers_Authenticated/before.xhtml">before()</a>
+                — Require the user to be authenticated before giving access to all methods in the controller</li>
+          </ul>
+          <h3>Inherited from <a title="Core\Controller" href="../classes/Core_Controller.xhtml">Core\Controller</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="after"><a title="Core\Controller" href="../classes/Core_Controller/after.xhtml">after()</a>
+                — After filter - called after any action method.</li>
+            <li id="before"><a title="Core\Controller" href="../classes/Core_Controller/before.xhtml">before()</a>
+                — Before filter - called before any action method.</li>
+            <li id="convertDatatablesRequest"><a title="Core\Controller" href="../classes/Core_Controller/convertDatatablesRequest.xhtml">convertDatatablesRequest()</a>
+                — Get mime type</li>
+            <li id="getMimeType"><a title="Core\Controller" href="../classes/Core_Controller/getMimeType.xhtml">getMimeType()</a>
+                — Get mime type</li>
+            <li id="startDownload"><a title="Core\Controller" href="../classes/Core_Controller/startDownload.xhtml">startDownload()</a>
+                — Start a download</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__call"><a title="Core\Controller" href="../classes/Core_Controller/__call.xhtml">__call()</a>
+                — Magic method called when a non-existent or inaccessible method is called on an object of this class. Used to execute before and after filter methods on action methods. Action methods need to be named with an "Action" suffix, e.g. indexAction, showAction etc.</li>
+            <li id="redirect"><a title="Core\Controller" href="../classes/Core_Controller/redirect.xhtml">redirect()</a>
+                — Redirect to a different page</li>
+            <li id="requireLogin"><a title="Core\Controller" href="../classes/Core_Controller/requireLogin.xhtml">requireLogin()</a>
+                — Require the user to be logged in before giving access to the requested page.</li>
+            <li id="requireNoLogin"><a title="Core\Controller" href="../classes/Core_Controller/requireNoLogin.xhtml">requireNoLogin()</a>
+                — Require the user not to be logged in before giving access to the requested page.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2018 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>
