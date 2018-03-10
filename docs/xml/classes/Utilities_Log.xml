@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Utilities\Log" namespace="Utilities" name="Log" abstract="false" final="false" start="12" end="65">
-  <file path="/var/www/media/app/Utilities" file="Log.php" realpath="/var/www/media/app/Utilities/Log.php" size="1350" time="2018-03-07T19:43:58+00:00" unixtime="1520451838" sha1="c7b2642327cee45cc5f57c633b6c8beb3fc5ce6b" relative="Utilities/Log.php"/>
+  <file path="/var/www/media/app/Utilities" file="Log.php" realpath="/var/www/media/app/Utilities/Log.php" size="1363" time="2018-03-10T12:00:37+00:00" unixtime="1520683237" sha1="d7e63bf739078f7e7f008ff45b1e05bb0aa3984c" relative="Utilities/Log.php"/>
   <docblock>
-    <description compact="Base Log">PHP version 7.0</description>
+    <description compact="Provides log services">PHP version 7.0</description>
   </docblock>
   <method name="write" start="22" end="28" abstract="false" final="false" static="true" visibility="public">
     <docblock>

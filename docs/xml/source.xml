@@ -9,29 +9,29 @@
       <file name="Comic.php" size="3358" time="2018-03-07T19:41:14+00:00" unixtime="1520451674" sha1="1c18c3cd5a2e07883ea0acc51316866997b81111" xml="tokens/Models/Comic.php.xml"/>
     </dir>
     <dir name="Utilities">
-      <file name="Flash.php" size="2133" time="2018-03-07T19:43:51+00:00" unixtime="1520451831" sha1="348a1e2b5b3320cc1398c9d6c27882f8b32f2700" xml="tokens/Utilities/Flash.php.xml"/>
-      <file name="Token.php" size="1061" time="2018-03-07T19:44:20+00:00" unixtime="1520451860" sha1="fb43922cda1d749571c80041db0695928e86f217" xml="tokens/Utilities/Token.php.xml"/>
-      <file name="Log.php" size="1350" time="2018-03-07T19:43:58+00:00" unixtime="1520451838" sha1="c7b2642327cee45cc5f57c633b6c8beb3fc5ce6b" xml="tokens/Utilities/Log.php.xml"/>
-      <file name="Auth.php" size="3315" time="2018-03-07T19:43:10+00:00" unixtime="1520451790" sha1="4ea717c5b3c5d3fc5686fb631d789663faf3dc5d" xml="tokens/Utilities/Auth.php.xml"/>
-      <file name="Mail.php" size="1874" time="2018-03-07T19:44:04+00:00" unixtime="1520451844" sha1="cd7ec80c9d9122ded70dd503b6dc25bd8842bb39" xml="tokens/Utilities/Mail.php.xml"/>
+      <file name="Flash.php" size="2110" time="2018-03-10T12:00:27+00:00" unixtime="1520683227" sha1="aad38bf67d186010072abab4d06470b01eb89680" xml="tokens/Utilities/Flash.php.xml"/>
+      <file name="Token.php" size="1078" time="2018-03-10T12:01:39+00:00" unixtime="1520683299" sha1="7e3430b94ed0b6bcd2d6a210d39b1704dc05cf92" xml="tokens/Utilities/Token.php.xml"/>
+      <file name="Log.php" size="1363" time="2018-03-10T12:00:37+00:00" unixtime="1520683237" sha1="d7e63bf739078f7e7f008ff45b1e05bb0aa3984c" xml="tokens/Utilities/Log.php.xml"/>
+      <file name="Auth.php" size="3333" time="2018-03-10T11:59:56+00:00" unixtime="1520683196" sha1="763cb27631190de5aeb1728c2152d5636a395944" xml="tokens/Utilities/Auth.php.xml"/>
+      <file name="Mail.php" size="1893" time="2018-03-10T12:00:55+00:00" unixtime="1520683255" sha1="33243f4cd555ee078daf59e20a9d6cdc836910d4" xml="tokens/Utilities/Mail.php.xml"/>
     </dir>
     <dir name="Core">
-      <file name="Router.php" size="4577" time="2018-03-07T17:51:41+00:00" unixtime="1520445101" sha1="a0a63c3791523314b6287cd9aa12d8aa23295f84" xml="tokens/Core/Router.php.xml"/>
+      <file name="Router.php" size="4642" time="2018-03-10T11:58:43+00:00" unixtime="1520683123" sha1="e150d1f815bac2b6a9931dbc6002c40596729a85" xml="tokens/Core/Router.php.xml"/>
       <file name="Controller.php" size="5277" time="2018-03-07T19:37:53+00:00" unixtime="1520451473" sha1="7a44dc8e23b407a58ffbb1bcb2e3a15ef3db5ec0" xml="tokens/Core/Controller.php.xml"/>
       <file name="Model.php" size="1017" time="2018-03-07T19:37:24+00:00" unixtime="1520451444" sha1="d6152571569241b55108e81f378a312a79d50da8" xml="tokens/Core/Model.php.xml"/>
       <file name="Config.php" size="1344" time="2018-03-07T19:38:19+00:00" unixtime="1520451499" sha1="1ede1d7c430b6ce4ba4aa1860063609e0034ed34" xml="tokens/Core/Config.php.xml"/>
-      <file name="Request.php" size="7065" time="2018-03-07T19:39:28+00:00" unixtime="1520451568" sha1="495e7338e6293b16fcadfc61dbb2733536bb0056" xml="tokens/Core/Request.php.xml"/>
+      <file name="Request.php" size="7097" time="2018-03-10T11:56:45+00:00" unixtime="1520683005" sha1="583e1d8643f81207e644c2dc56380bda8195cbe8" xml="tokens/Core/Request.php.xml"/>
       <file name="Error.php" size="2043" time="2018-03-07T19:37:38+00:00" unixtime="1520451458" sha1="6006a28ad0ae624eab21a589f5a29cd1aedb20a3" xml="tokens/Core/Error.php.xml"/>
-      <file name="View.php" size="1735" time="2018-03-07T19:40:00+00:00" unixtime="1520451600" sha1="c91b6ee948b54d7abd444c1626040a58e46a7338" xml="tokens/Core/View.php.xml"/>
+      <file name="View.php" size="1740" time="2018-03-10T11:58:52+00:00" unixtime="1520683132" sha1="69a6e1f3914dc07b516ac38b02c7058812c0addd" xml="tokens/Core/View.php.xml"/>
     </dir>
     <dir name="Controllers">
-      <file name="Comics.php" size="1622" time="2018-03-07T19:25:54+00:00" unixtime="1520450754" sha1="2446642c6567875f36a02a0402f4cffb8e9696c0" xml="tokens/Controllers/Comics.php.xml"/>
+      <file name="Comics.php" size="1622" time="2018-03-08T22:17:26+00:00" unixtime="1520547446" sha1="2446642c6567875f36a02a0402f4cffb8e9696c0" xml="tokens/Controllers/Comics.php.xml"/>
       <file name="Signup.php" size="1109" time="2018-03-07T17:53:05+00:00" unixtime="1520445185" sha1="d0183bd735ed7d61c167b0049b5b47a535cbd6c4" xml="tokens/Controllers/Signup.php.xml"/>
       <file name="Movies.php" size="1421" time="2018-03-07T19:26:05+00:00" unixtime="1520450765" sha1="9fa256e4aa617442bdfe57ed76d373b3a7255753" xml="tokens/Controllers/Movies.php.xml"/>
       <file name="Profile.php" size="981" time="2018-03-06T18:19:03+00:00" unixtime="1520360343" sha1="916e5b859e6edeb88a7f7ccfa68742538c4a4698" xml="tokens/Controllers/Profile.php.xml"/>
-      <file name="Admin.php" size="1049" time="2018-03-07T19:25:45+00:00" unixtime="1520450745" sha1="93d5b36e2bfa2d9b25726d5ee557ca9006b24059" xml="tokens/Controllers/Admin.php.xml"/>
+      <file name="Admin.php" size="1049" time="2018-03-10T11:52:16+00:00" unixtime="1520682736" sha1="fc85bf05e1ba785e2660da410204535acef3eab4" xml="tokens/Controllers/Admin.php.xml"/>
       <file name="Login.php" size="1536" time="2018-03-06T18:23:36+00:00" unixtime="1520360616" sha1="73937ff2069c6c368cea650bc3082ede0f0ba021" xml="tokens/Controllers/Login.php.xml"/>
-      <file name="Authenticated.php" size="374" time="2018-03-06T18:23:47+00:00" unixtime="1520360627" sha1="f1acd37c4d6c25bb75e74455f52c4ff0dae3ccde" xml="tokens/Controllers/Authenticated.php.xml"/>
+      <file name="Authenticated.php" size="374" time="2018-03-08T22:17:38+00:00" unixtime="1520547458" sha1="f1acd37c4d6c25bb75e74455f52c4ff0dae3ccde" xml="tokens/Controllers/Authenticated.php.xml"/>
       <file name="Password.php" size="2493" time="2018-03-07T19:40:49+00:00" unixtime="1520451649" sha1="7a5014c619d28fa8e807a4ad67e5d271795b58dd" xml="tokens/Controllers/Password.php.xml"/>
       <file name="Logout.php" size="422" time="2018-03-06T18:18:49+00:00" unixtime="1520360329" sha1="3bfec8b9c427b0285fc3af74904460beb75e2f78" xml="tokens/Controllers/Logout.php.xml"/>
       <file name="Tvshows.php" size="1749" time="2018-03-07T19:26:19+00:00" unixtime="1520450779" sha1="1155169492bfe13a63f68820f5132597a9e53bdb" xml="tokens/Controllers/Tvshows.php.xml"/>

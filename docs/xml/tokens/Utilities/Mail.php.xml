@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Mail.php" realpath="/var/www/media/app/Utilities/Mail.php" size="1874" time="2018-03-07T19:44:04+00:00" unixtime="1520451844" sha1="cd7ec80c9d9122ded70dd503b6dc25bd8842bb39" relative="Utilities/Mail.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Mail.php" realpath="/var/www/media/app/Utilities/Mail.php" size="1893" time="2018-03-10T12:00:55+00:00" unixtime="1520683255" sha1="33243f4cd555ee078daf59e20a9d6cdc836910d4" relative="Utilities/Mail.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -46,7 +46,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="10">
-    <token name="T_DOC_COMMENT"> * Mail</token>
+    <token name="T_DOC_COMMENT"> * Provides email services</token>
   </line>
   <line no="11">
     <token name="T_DOC_COMMENT"> *</token>

@@ -3,7 +3,7 @@
 namespace Core;
 
 /**
- * App
+ * Provides access to the http request
  *
  * PHP version 7.0
  */

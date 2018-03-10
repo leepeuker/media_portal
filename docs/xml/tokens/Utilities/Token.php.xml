@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Token.php" realpath="/var/www/media/app/Utilities/Token.php" size="1061" time="2018-03-07T19:44:20+00:00" unixtime="1520451860" sha1="fb43922cda1d749571c80041db0695928e86f217" relative="Utilities/Token.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Token.php" realpath="/var/www/media/app/Utilities/Token.php" size="1078" time="2018-03-10T12:01:39+00:00" unixtime="1520683299" sha1="7e3430b94ed0b6bcd2d6a210d39b1704dc05cf92" relative="Utilities/Token.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -16,7 +16,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Unique random tokens</token>
+    <token name="T_DOC_COMMENT"> * Provides unique random token services</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> *</token>

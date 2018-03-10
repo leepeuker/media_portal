@@ -8,31 +8,31 @@
     <class name="Comic" src="Models/Comic.php" description="Comic model" xml="classes/Models_Comic.xml"/>
   </namespace>
   <namespace name="Utilities">
-    <class name="Flash" src="Utilities/Flash.php" description="Flash notification messages: messages for one-time display using the session for storage between requests." xml="classes/Utilities_Flash.xml"/>
-    <class name="Token" src="Utilities/Token.php" description="Unique random tokens" xml="classes/Utilities_Token.xml"/>
-    <class name="Log" src="Utilities/Log.php" description="Base Log" xml="classes/Utilities_Log.xml"/>
-    <class name="Auth" src="Utilities/Auth.php" description="Authentication" xml="classes/Utilities_Auth.xml"/>
-    <class name="Mail" src="Utilities/Mail.php" description="Mail" xml="classes/Utilities_Mail.xml"/>
-  </namespace>
+    
+    
+    
+    
+    
+  <class name="Flash" src="Utilities/Flash.php" description="Flash messages for one-time display using the session for storage between requests." xml="classes/Utilities_Flash.xml"/><class name="Token" src="Utilities/Token.php" description="Provides unique random token services" xml="classes/Utilities_Token.xml"/><class name="Log" src="Utilities/Log.php" description="Provides log services" xml="classes/Utilities_Log.xml"/><class name="Auth" src="Utilities/Auth.php" description="Provides authentication services" xml="classes/Utilities_Auth.xml"/><class name="Mail" src="Utilities/Mail.php" description="Provides email services" xml="classes/Utilities_Mail.xml"/></namespace>
   <namespace name="Core">
-    <class name="Router" src="Core/Router.php" description="Router" xml="classes/Core_Router.xml"/>
+    
     <class name="Controller" src="Core/Controller.php" description="Base controller" xml="classes/Core_Controller.xml"/>
     <class name="Model" src="Core/Model.php" description="Base model" xml="classes/Core_Model.xml"/>
     <class name="Config" src="Core/Config.php" description="Application configuration" xml="classes/Core_Config.xml"/>
-    <class name="Request" src="Core/Request.php" description="App" xml="classes/Core_Request.xml"/>
+    
     <class name="Error" src="Core/Error.php" description="Error and exception handler" xml="classes/Core_Error.xml"/>
-    <class name="View" src="Core/View.php" description="View" xml="classes/Core_View.xml"/>
-  </namespace>
+    
+  <class name="Router" src="Core/Router.php" description="Routes the http request and calls the matching controller/action method" xml="classes/Core_Router.xml"/><class name="Request" src="Core/Request.php" description="Provides access to the http request" xml="classes/Core_Request.xml"/><class name="View" src="Core/View.php" description="Base view" xml="classes/Core_View.xml"/></namespace>
   <namespace name="Controllers">
     <class name="Comics" src="Controllers/Comics.php" description="Comics controller" xml="classes/Controllers_Comics.xml"/>
     <class name="Signup" src="Controllers/Signup.php" description="Signup controller" xml="classes/Controllers_Signup.xml"/>
     <class name="Movies" src="Controllers/Movies.php" description="Movies controller" xml="classes/Controllers_Movies.xml"/>
     <class name="Profile" src="Controllers/Profile.php" description="Profile controller" xml="classes/Controllers_Profile.xml"/>
-    <class name="Admin" src="Controllers/Admin.php" description="Login controller" xml="classes/Controllers_Admin.xml"/>
+    
     <class name="Login" src="Controllers/Login.php" description="Login controller" xml="classes/Controllers_Login.xml"/>
     <class name="Authenticated" src="Controllers/Authenticated.php" description="Authenticated base controller" xml="classes/Controllers_Authenticated.xml"/>
     <class name="Password" src="Controllers/Password.php" description="Password controller" xml="classes/Controllers_Password.xml"/>
     <class name="Logout" src="Controllers/Logout.php" description="Logout controller" xml="classes/Controllers_Logout.xml"/>
     <class name="Tvshows" src="Controllers/Tvshows.php" description="Tvshows controller" xml="classes/Controllers_Tvshows.xml"/>
-  </namespace>
+  <class name="Admin" src="Controllers/Admin.php" description="Admin controller" xml="classes/Controllers_Admin.xml"/></namespace>
 </index>

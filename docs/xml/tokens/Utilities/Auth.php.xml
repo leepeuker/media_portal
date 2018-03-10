@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Auth.php" realpath="/var/www/media/app/Utilities/Auth.php" size="3315" time="2018-03-07T19:43:10+00:00" unixtime="1520451790" sha1="4ea717c5b3c5d3fc5686fb631d789663faf3dc5d" relative="Utilities/Auth.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Auth.php" realpath="/var/www/media/app/Utilities/Auth.php" size="3333" time="2018-03-10T11:59:56+00:00" unixtime="1520683196" sha1="763cb27631190de5aeb1728c2152d5636a395944" relative="Utilities/Auth.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -35,7 +35,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="9">
-    <token name="T_DOC_COMMENT"> * Authentication</token>
+    <token name="T_DOC_COMMENT"> * Provides authentication services</token>
   </line>
   <line no="10">
     <token name="T_DOC_COMMENT"> *</token>

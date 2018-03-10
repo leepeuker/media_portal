@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="Router.php" realpath="/var/www/media/app/Core/Router.php" size="4577" time="2018-03-07T17:51:41+00:00" unixtime="1520445101" sha1="a0a63c3791523314b6287cd9aa12d8aa23295f84" relative="Core/Router.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="Router.php" realpath="/var/www/media/app/Core/Router.php" size="4642" time="2018-03-10T11:58:43+00:00" unixtime="1520683123" sha1="e150d1f815bac2b6a9931dbc6002c40596729a85" relative="Core/Router.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -16,7 +16,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Router</token>
+    <token name="T_DOC_COMMENT"> * Routes the http request and calls the matching controller/action method</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> *</token>

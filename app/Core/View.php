@@ -3,7 +3,7 @@
 namespace Core;
 
 /**
- * View
+ * Base view
  *
  * PHP version 7.0
  */

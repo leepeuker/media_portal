@@ -3,7 +3,7 @@
 namespace Core;
 
 /**
- * Router
+ * Routes the http request and calls the matching controller/action method
  *
  * PHP version 7.0
  */

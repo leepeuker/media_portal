@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Log.php" realpath="/var/www/media/app/Utilities/Log.php" size="1350" time="2018-03-07T19:43:58+00:00" unixtime="1520451838" sha1="c7b2642327cee45cc5f57c633b6c8beb3fc5ce6b" relative="Utilities/Log.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Utilities" file="Log.php" realpath="/var/www/media/app/Utilities/Log.php" size="1363" time="2018-03-10T12:00:37+00:00" unixtime="1520683237" sha1="d7e63bf739078f7e7f008ff45b1e05bb0aa3984c" relative="Utilities/Log.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -26,7 +26,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="8">
-    <token name="T_DOC_COMMENT"> * Base Log</token>
+    <token name="T_DOC_COMMENT"> * Provides log services</token>
   </line>
   <line no="9">
     <token name="T_DOC_COMMENT"> *</token>

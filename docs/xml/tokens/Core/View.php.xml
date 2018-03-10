@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="View.php" realpath="/var/www/media/app/Core/View.php" size="1735" time="2018-03-07T19:40:00+00:00" unixtime="1520451600" sha1="c91b6ee948b54d7abd444c1626040a58e46a7338" relative="Core/View.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="View.php" realpath="/var/www/media/app/Core/View.php" size="1740" time="2018-03-10T11:58:52+00:00" unixtime="1520683132" sha1="69a6e1f3914dc07b516ac38b02c7058812c0addd" relative="Core/View.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -16,7 +16,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * View</token>
+    <token name="T_DOC_COMMENT"> * Base view</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> *</token>

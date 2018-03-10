@@ -7,7 +7,7 @@ use \Models\User;
 use \Utilities\Log;
 
 /**
- * Login controller
+ * Admin controller
  *
  * PHP version 7.0
  */

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Utilities\Mail" namespace="Utilities" name="Mail" abstract="false" final="false" start="14" end="60">
-  <file path="/var/www/media/app/Utilities" file="Mail.php" realpath="/var/www/media/app/Utilities/Mail.php" size="1874" time="2018-03-07T19:44:04+00:00" unixtime="1520451844" sha1="cd7ec80c9d9122ded70dd503b6dc25bd8842bb39" relative="Utilities/Mail.php"/>
+  <file path="/var/www/media/app/Utilities" file="Mail.php" realpath="/var/www/media/app/Utilities/Mail.php" size="1893" time="2018-03-10T12:00:55+00:00" unixtime="1520683255" sha1="33243f4cd555ee078daf59e20a9d6cdc836910d4" relative="Utilities/Mail.php"/>
   <docblock>
-    <description compact="Mail">PHP version 7.0</description>
+    <description compact="Provides email services">PHP version 7.0</description>
   </docblock>
   <method name="send" start="26" end="59" abstract="false" final="false" static="true" visibility="public">
     <docblock>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="Request.php" realpath="/var/www/media/app/Core/Request.php" size="7065" time="2018-03-07T19:39:28+00:00" unixtime="1520451568" sha1="495e7338e6293b16fcadfc61dbb2733536bb0056" relative="Core/Request.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="Request.php" realpath="/var/www/media/app/Core/Request.php" size="7097" time="2018-03-10T11:56:45+00:00" unixtime="1520683005" sha1="583e1d8643f81207e644c2dc56380bda8195cbe8" relative="Core/Request.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -16,7 +16,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * App</token>
+    <token name="T_DOC_COMMENT"> * Provides access to the http request</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> *</token>

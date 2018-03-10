@@ -5,7 +5,7 @@ namespace Utilities;
 use \Core\Config;
 
 /**
- * Base Log
+ * Provides log services
  *
  * PHP version 7.0
  */

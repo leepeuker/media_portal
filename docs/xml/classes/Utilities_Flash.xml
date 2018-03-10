@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Utilities\Flash" namespace="Utilities" name="Flash" abstract="false" final="false" start="11" end="96">
-  <file path="/var/www/media/app/Utilities" file="Flash.php" realpath="/var/www/media/app/Utilities/Flash.php" size="2133" time="2018-03-07T19:43:51+00:00" unixtime="1520451831" sha1="348a1e2b5b3320cc1398c9d6c27882f8b32f2700" relative="Utilities/Flash.php"/>
+  <file path="/var/www/media/app/Utilities" file="Flash.php" realpath="/var/www/media/app/Utilities/Flash.php" size="2110" time="2018-03-10T12:00:27+00:00" unixtime="1520683227" sha1="aad38bf67d186010072abab4d06470b01eb89680" relative="Utilities/Flash.php"/>
   <docblock>
-    <description compact="Flash notification messages: messages for one-time display using the session for storage between requests.">PHP version 7.0</description>
+    <description compact="Flash messages for one-time display using the session for storage between requests.">PHP version 7.0</description>
   </docblock>
   <constant type="string" name="SUCCESS" value="'success'">
     <docblock>

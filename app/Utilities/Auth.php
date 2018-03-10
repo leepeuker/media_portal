@@ -6,7 +6,7 @@ use \Models\User;
 use \Models\RememberedLogin;
 
 /**
- * Authentication
+ * Provides authentication services
  *
  * PHP version 7.0
  */

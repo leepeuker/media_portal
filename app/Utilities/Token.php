@@ -3,7 +3,7 @@
 namespace Utilities;
 
 /**
- * Unique random tokens
+ * Provides unique random token services
  *
  * PHP version 7.0
  */

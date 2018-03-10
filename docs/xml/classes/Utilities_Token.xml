@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Utilities\Token" namespace="Utilities" name="Token" abstract="false" final="false" start="10" end="56">
-  <file path="/var/www/media/app/Utilities" file="Token.php" realpath="/var/www/media/app/Utilities/Token.php" size="1061" time="2018-03-07T19:44:20+00:00" unixtime="1520451860" sha1="fb43922cda1d749571c80041db0695928e86f217" relative="Utilities/Token.php"/>
+  <file path="/var/www/media/app/Utilities" file="Token.php" realpath="/var/www/media/app/Utilities/Token.php" size="1078" time="2018-03-10T12:01:39+00:00" unixtime="1520683299" sha1="7e3430b94ed0b6bcd2d6a210d39b1704dc05cf92" relative="Utilities/Token.php"/>
   <docblock>
-    <description compact="Unique random tokens">PHP version 7.0</description>
+    <description compact="Provides unique random token services">PHP version 7.0</description>
   </docblock>
   <member name="token" visibility="protected" static="false" line="17">
     <docblock>

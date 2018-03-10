@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Core\Request" namespace="Core" name="Request" abstract="false" final="false" start="10" end="316">
-  <file path="/var/www/media/app/Core" file="Request.php" realpath="/var/www/media/app/Core/Request.php" size="7065" time="2018-03-07T19:39:28+00:00" unixtime="1520451568" sha1="495e7338e6293b16fcadfc61dbb2733536bb0056" relative="Core/Request.php"/>
+  <file path="/var/www/media/app/Core" file="Request.php" realpath="/var/www/media/app/Core/Request.php" size="7097" time="2018-03-10T11:56:45+00:00" unixtime="1520683005" sha1="583e1d8643f81207e644c2dc56380bda8195cbe8" relative="Core/Request.php"/>
   <docblock>
-    <description compact="App">PHP version 7.0</description>
+    <description compact="Provides access to the http request">PHP version 7.0</description>
   </docblock>
   <member name="data" default="" type="array" visibility="private" static="false" line="16">
     <docblock>

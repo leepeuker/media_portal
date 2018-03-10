@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Controllers" file="Admin.php" realpath="/var/www/media/app/Controllers/Admin.php" size="1049" time="2018-03-07T19:25:45+00:00" unixtime="1520450745" sha1="93d5b36e2bfa2d9b25726d5ee557ca9006b24059" relative="Controllers/Admin.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Controllers" file="Admin.php" realpath="/var/www/media/app/Controllers/Admin.php" size="1049" time="2018-03-10T11:52:16+00:00" unixtime="1520682736" sha1="fc85bf05e1ba785e2660da410204535acef3eab4" relative="Controllers/Admin.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -44,7 +44,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="10">
-    <token name="T_DOC_COMMENT"> * Login controller</token>
+    <token name="T_DOC_COMMENT"> * Admin controller</token>
   </line>
   <line no="11">
     <token name="T_DOC_COMMENT"> *</token>
