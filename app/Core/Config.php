@@ -10,13 +10,13 @@ namespace Core;
 class Config 
 {
     /**
-     * Array of configurations
+     * Associative array of configuration values
      * @var array
      */
     private static $config = [];
 
     /**
-     * Get default configuration value(s)
+     * Calls the get() method
      *
      * @param string $key 
      * @return string|array|null
@@ -27,7 +27,7 @@ class Config
     }
 
     /**
-     * Set or add a default configuration value
+     * Set or add a runtime configuration value
      *
      * @param string $key 
      */
@@ -37,8 +37,8 @@ class Config
     }
 
     /**
-     * Get a configuration value(s)
-     *
+     * Load config file on first method call and get configuration value(s). 
+     * 
      * @param string $key 
      * @param string $source 
      * @return string|null

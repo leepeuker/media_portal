@@ -37,14 +37,11 @@ abstract class Controller
     }
 
     /**
-     * Magic method called when a non-existent or inaccessible method is
-     * called on an object of this class. Used to execute before and after
-     * filter methods on action methods. Action methods need to be named
-     * with an "Action" suffix, e.g. indexAction, showAction etc.
+     * Used to execute before and after methods on action method. 
+     * Action methods need to be named with an "Action" suffix.
      *
-     * @access public
-     * @param string $name  Method name
-     * @param array $args Arguments passed to the method
+     * @param string $name Method name
+     * @param array  $args Arguments passed to the method
      * @return void
      */
     public function __call($name, $args)

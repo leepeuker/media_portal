@@ -48,12 +48,11 @@ class Request
     }
 
     /**
-     * merge post and files data
-     * You shouldn't have two fields with the same 'name' attribute in $_POST & $_FILES
+     * Merge $_POST and $_FILES data
      *
      * @param array $post
      * @param array $files
-     * @return array the merged array
+     * @return array The merged array
      */
     private function mergeData(array $post, array $files)
     {
