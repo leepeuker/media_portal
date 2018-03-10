@@ -19,6 +19,6 @@ To display (or delete/edit/create) all this informations in a browser I created 
 * A full html/xml documentation about the php source code
 * Unit tests (coming soon)
 
-### Link
+### Online Documentation
 
-[https://media.leepeuker.de](https://media.leepeuker.de)
+[www.leepeuker.de/docs/media_portal/index.xhtml](https://www.leepeuker.de/docs/media_portal/index.xhtml)
