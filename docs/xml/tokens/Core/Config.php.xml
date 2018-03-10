@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="Config.php" realpath="/var/www/media/app/Core/Config.php" size="1344" time="2018-03-07T19:38:19+00:00" unixtime="1520451499" sha1="1ede1d7c430b6ce4ba4aa1860063609e0034ed34" relative="Core/Config.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/media/app/Core" file="Config.php" realpath="/var/www/media/app/Core/Config.php" size="1393" time="2018-03-10T12:16:48+00:00" unixtime="1520684208" sha1="f0afe45ca3d3ebf3dcda919743544fe53ddc338c" relative="Core/Config.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -41,7 +41,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="13">
-    <token name="T_DOC_COMMENT">     * Array of configurations</token>
+    <token name="T_DOC_COMMENT">     * Associative array of configuration values</token>
   </line>
   <line no="14">
     <token name="T_DOC_COMMENT">     * @var array</token>
@@ -69,7 +69,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="19">
-    <token name="T_DOC_COMMENT">     * Get default configuration value(s)</token>
+    <token name="T_DOC_COMMENT">     * Calls the get() method</token>
   </line>
   <line no="20">
     <token name="T_DOC_COMMENT">     *</token>
@@ -122,7 +122,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="30">
-    <token name="T_DOC_COMMENT">     * Set or add a default configuration value</token>
+    <token name="T_DOC_COMMENT">     * Set or add a runtime configuration value</token>
   </line>
   <line no="31">
     <token name="T_DOC_COMMENT">     *</token>
@@ -176,10 +176,10 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="40">
-    <token name="T_DOC_COMMENT">     * Get a configuration value(s)</token>
+    <token name="T_DOC_COMMENT">     * Load config file on first method call and get configuration value(s). </token>
   </line>
   <line no="41">
-    <token name="T_DOC_COMMENT">     *</token>
+    <token name="T_DOC_COMMENT">     * </token>
   </line>
   <line no="42">
     <token name="T_DOC_COMMENT">     * @param string $key </token>

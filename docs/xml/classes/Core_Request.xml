@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="Core\Request" namespace="Core" name="Request" abstract="false" final="false" start="10" end="316">
-  <file path="/var/www/media/app/Core" file="Request.php" realpath="/var/www/media/app/Core/Request.php" size="7097" time="2018-03-10T11:56:45+00:00" unixtime="1520683005" sha1="583e1d8643f81207e644c2dc56380bda8195cbe8" relative="Core/Request.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="Core\Request" namespace="Core" name="Request" abstract="false" final="false" start="10" end="315">
+  <file path="/var/www/media/app/Core" file="Request.php" realpath="/var/www/media/app/Core/Request.php" size="7012" time="2018-03-10T12:22:17+00:00" unixtime="1520684537" sha1="7e844a52ebb76b2993ada8ba1d07d7254ae81d91" relative="Core/Request.php"/>
   <docblock>
     <description compact="Provides access to the http request">PHP version 7.0</description>
   </docblock>
@@ -33,17 +33,17 @@
       <description compact="Constructor"/>
     </docblock>
   </constructor>
-  <method name="mergeData" start="58" end="68" abstract="false" final="false" static="false" visibility="private">
+  <method name="mergeData" start="57" end="67" abstract="false" final="false" static="false" visibility="private">
     <docblock>
-      <description compact="merge post and files data You shouldn't have two fields with the same 'name' attribute in $_POST &amp; $_FILES"/>
+      <description compact="Merge $_POST and $_FILES data"/>
       <param type="array" variable="$post"/>
       <param type="array" variable="$files"/>
-      <return description="the merged array" type="array"/>
+      <return description="The merged array" type="array"/>
     </docblock>
     <parameter name="post" byreference="false" type="array"/>
     <parameter name="files" byreference="false" type="array"/>
   </method>
-  <method name="countData" start="76" end="88" abstract="false" final="false" static="false" visibility="public">
+  <method name="countData" start="75" end="87" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Count fields in $this-&gt;data and optionally exclude some fields"/>
       <param description="Fields to exclude" type="array" variable="$exclude"/>
@@ -51,7 +51,7 @@
     </docblock>
     <parameter name="exclude" byreference="false" type="array" default=""/>
   </method>
-  <method name="data" start="96" end="104" abstract="false" final="false" static="false" visibility="public">
+  <method name="data" start="95" end="103" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Safer and better access to $this-&gt;data"/>
       <param description="Key name of data value" type="string" variable="$key"/>
@@ -59,7 +59,7 @@
     </docblock>
     <parameter name="key" byreference="false" type="{unknown}" default="NULL"/>
   </method>
-  <method name="query" start="112" end="120" abstract="false" final="false" static="false" visibility="public">
+  <method name="query" start="111" end="119" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Safer and better access to $this-&gt;query"/>
       <param description="Key name of query value" type="string" variable="$key"/>
@@ -67,7 +67,7 @@
     </docblock>
     <parameter name="key" byreference="false" type="{unknown}" default="NULL"/>
   </method>
-  <method name="params" start="128" end="131" abstract="false" final="false" static="false" visibility="public">
+  <method name="params" start="127" end="130" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="safer and better access to $this-&gt;params"/>
       <param description="Key name of param value" type="string" variable="$key"/>
@@ -75,37 +75,37 @@
     </docblock>
     <parameter name="key" byreference="false" type="{unknown}"/>
   </method>
-  <method name="isAjax" start="138" end="146" abstract="false" final="false" static="false" visibility="public">
+  <method name="isAjax" start="137" end="145" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="detect if request is Ajax"/>
       <return description="True if ajax request, false otherwise" type="boolean"/>
     </docblock>
   </method>
-  <method name="isPost" start="153" end="156" abstract="false" final="false" static="false" visibility="public">
+  <method name="isPost" start="152" end="155" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="detect if request is POST request"/>
       <return description="True if post request, false otherwise" type="boolean"/>
     </docblock>
   </method>
-  <method name="isGet" start="163" end="166" abstract="false" final="false" static="false" visibility="public">
+  <method name="isGet" start="162" end="165" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="detect if request is GET request"/>
       <return description="True if get request, false otherwise" type="boolean"/>
     </docblock>
   </method>
-  <method name="isSSL" start="174" end="177" abstract="false" final="false" static="false" visibility="public">
+  <method name="isSSL" start="173" end="176" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Detect if request over secured connection(SSL)"/>
       <return description="True if ssl request, false otherwise" type="boolean"/>
     </docblock>
   </method>
-  <method name="contentLength" start="184" end="187" abstract="false" final="false" static="false" visibility="public">
+  <method name="contentLength" start="183" end="186" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get content length"/>
       <return type="integer"/>
     </docblock>
   </method>
-  <method name="uri" start="194" end="207" abstract="false" final="false" static="false" visibility="public">
+  <method name="uri" start="193" end="206" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the current uri of the request (without query variables)"/>
       <return type="object">
@@ -113,7 +113,7 @@
       </return>
     </docblock>
   </method>
-  <method name="name" start="214" end="217" abstract="false" final="false" static="false" visibility="public">
+  <method name="name" start="213" end="216" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the name of the server host"/>
       <return type="object">
@@ -121,7 +121,7 @@
       </return>
     </docblock>
   </method>
-  <method name="referer" start="224" end="227" abstract="false" final="false" static="false" visibility="public">
+  <method name="referer" start="223" end="226" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the referer of this request."/>
       <return type="object">
@@ -129,7 +129,7 @@
       </return>
     </docblock>
   </method>
-  <method name="clientIp" start="234" end="237" abstract="false" final="false" static="false" visibility="public">
+  <method name="clientIp" start="233" end="236" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Fet the client IP addresses."/>
       <return type="object">
@@ -137,7 +137,7 @@
       </return>
     </docblock>
   </method>
-  <method name="userAgent" start="244" end="247" abstract="false" final="false" static="false" visibility="public">
+  <method name="userAgent" start="243" end="246" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the contents of the User Agent"/>
       <return type="object">
@@ -145,31 +145,31 @@
       </return>
     </docblock>
   </method>
-  <method name="protocol" start="254" end="257" abstract="false" final="false" static="false" visibility="public">
+  <method name="protocol" start="253" end="256" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the request protocol."/>
       <return type="string"/>
     </docblock>
   </method>
-  <method name="getProtocolAndHost" start="264" end="267" abstract="false" final="false" static="false" visibility="public">
+  <method name="getProtocolAndHost" start="263" end="266" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the protocol and HTTP host"/>
       <return description="The protocol and the host" type="string"/>
     </docblock>
   </method>
-  <method name="url" start="274" end="277" abstract="false" final="false" static="false" visibility="public">
+  <method name="url" start="273" end="276" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the full URL for the request with the added query string parameters"/>
       <return type="string"/>
     </docblock>
   </method>
-  <method name="urlWithoutProtocol" start="286" end="289" abstract="false" final="false" static="false" visibility="public">
+  <method name="urlWithoutProtocol" start="285" end="288" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the full URL for the request without the protocol.">It could be useful to force a specific protocol.</description>
       <return type="string"/>
     </docblock>
   </method>
-  <method name="getBaseUrl" start="301" end="305" abstract="false" final="false" static="false" visibility="public">
+  <method name="getBaseUrl" start="300" end="304" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Returns the base URL.">Examples:
  * http://localhost/                         returns an empty string
@@ -178,7 +178,7 @@
       <return type="string"/>
     </docblock>
   </method>
-  <method name="root" start="312" end="315" abstract="false" final="false" static="false" visibility="public">
+  <method name="root" start="311" end="314" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Get the root URL for the application."/>
       <return type="string"/>
