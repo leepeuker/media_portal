@@ -8,3 +8,14 @@ I use [Kodi](https://kodi.tv/) at home to manage my movie and tv show collection
 To have a overview about my comicbook collection I implemented a way to create and delete database entries in another database.
 To display all this informations in a browser I created this portal. Besides displaying the information it provides a way for me to download my digital files.
 **This is for personal use only!** 
+
+### Built With
+
+* PHP and my own MVC framework
+* MYSQL
+* HTML, JavaScript, CSS
+
+### Provides
+
+* A full html/xml documentation about the php source code
+* Unit tests (coming soon)
