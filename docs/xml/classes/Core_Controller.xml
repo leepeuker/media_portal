@@ -113,4 +113,16 @@
       <return description="Mime type of file" type="string"/>
     </docblock>
   </method>
+  <extenders>
+    <extender full="Controllers\Comics" namespace="Controllers" name="Comics"/>
+    <extender full="Controllers\Signup" namespace="Controllers" name="Signup"/>
+    <extender full="Controllers\Movies" namespace="Controllers" name="Movies"/>
+    <extender full="Controllers\Profile" namespace="Controllers" name="Profile"/>
+    <extender full="Controllers\Admin" namespace="Controllers" name="Admin"/>
+    <extender full="Controllers\Login" namespace="Controllers" name="Login"/>
+    <extender full="Controllers\Authenticated" namespace="Controllers" name="Authenticated"/>
+    <extender full="Controllers\Password" namespace="Controllers" name="Password"/>
+    <extender full="Controllers\Logout" namespace="Controllers" name="Logout"/>
+    <extender full="Controllers\Tvshows" namespace="Controllers" name="Tvshows"/>
+  </extenders>
 </class>

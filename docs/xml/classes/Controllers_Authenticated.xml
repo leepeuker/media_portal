@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Controllers\Authenticated" namespace="Controllers" name="Authenticated" abstract="true" final="false" start="11" end="23">
-  <file path="/var/www/media/app/Controllers" file="Authenticated.php" realpath="/var/www/media/app/Controllers/Authenticated.php" size="374" time="2018-03-06T18:23:47+00:00" unixtime="1520360627" sha1="f1acd37c4d6c25bb75e74455f52c4ff0dae3ccde" relative="Controllers/Authenticated.php"/>
+  <file path="/var/www/media/app/Controllers" file="Authenticated.php" realpath="/var/www/media/app/Controllers/Authenticated.php" size="374" time="2018-03-08T22:17:38+00:00" unixtime="1520547458" sha1="f1acd37c4d6c25bb75e74455f52c4ff0dae3ccde" relative="Controllers/Authenticated.php"/>
   <docblock>
     <description compact="Authenticated base controller">PHP version 7.0</description>
   </docblock>
@@ -45,10 +45,9 @@
       </docblock>
       <parameter name="request" byreference="false" type="{unknown}"/>
     </constructor>
-    <method name="__call" start="50" end="63" abstract="false" final="false" static="false" visibility="public">
+    <method name="__call" start="47" end="60" abstract="false" final="false" static="false" visibility="public">
       <docblock>
-        <description compact="Magic method called when a non-existent or inaccessible method is called on an object of this class. Used to execute before and after filter methods on action methods. Action methods need to be named with an &quot;Action&quot; suffix, e.g. indexAction, showAction etc."/>
-        <access value="public"/>
+        <description compact="Used to execute before and after methods on action method.">Action methods need to be named with an "Action" suffix.</description>
         <param description="Method name" type="string" variable="$name"/>
         <param description="Arguments passed to the method" type="array" variable="$args"/>
         <return type="object">
@@ -58,7 +57,7 @@
       <parameter name="name" byreference="false" type="{unknown}"/>
       <parameter name="args" byreference="false" type="{unknown}"/>
     </method>
-    <method name="before" start="70" end="70" abstract="false" final="false" static="false" visibility="protected">
+    <method name="before" start="67" end="67" abstract="false" final="false" static="false" visibility="protected">
       <docblock>
         <description compact="Before filter - called before any action method."/>
         <return type="object">
@@ -66,7 +65,7 @@
         </return>
       </docblock>
     </method>
-    <method name="after" start="77" end="77" abstract="false" final="false" static="false" visibility="protected">
+    <method name="after" start="74" end="74" abstract="false" final="false" static="false" visibility="protected">
       <docblock>
         <description compact="After filter - called after any action method."/>
         <return type="object">
@@ -74,7 +73,7 @@
         </return>
       </docblock>
     </method>
-    <method name="redirect" start="86" end="90" abstract="false" final="false" static="false" visibility="public">
+    <method name="redirect" start="83" end="87" abstract="false" final="false" static="false" visibility="public">
       <docblock>
         <description compact="Redirect to a different page"/>
         <access value="public"/>
@@ -85,7 +84,7 @@
       </docblock>
       <parameter name="url" byreference="false" type="{unknown}"/>
     </method>
-    <method name="requireLogin" start="98" end="106" abstract="false" final="false" static="false" visibility="public">
+    <method name="requireLogin" start="95" end="103" abstract="false" final="false" static="false" visibility="public">
       <docblock>
         <description compact="Require the user to be logged in before giving access to the requested page."/>
         <access value="public"/>
@@ -94,7 +93,7 @@
         </return>
       </docblock>
     </method>
-    <method name="requireNoLogin" start="114" end="120" abstract="false" final="false" static="false" visibility="public">
+    <method name="requireNoLogin" start="111" end="117" abstract="false" final="false" static="false" visibility="public">
       <docblock>
         <description compact="Require the user not to be logged in before giving access to the requested page."/>
         <access value="public"/>
@@ -103,7 +102,7 @@
         </return>
       </docblock>
     </method>
-    <method name="startDownload" start="130" end="160" abstract="false" final="false" static="false" visibility="protected">
+    <method name="startDownload" start="127" end="157" abstract="false" final="false" static="false" visibility="protected">
       <docblock>
         <description compact="Start a download"/>
         <access value="protected"/>
@@ -115,7 +114,7 @@
       </docblock>
       <parameter name="file" byreference="false" type="{unknown}"/>
     </method>
-    <method name="getMimeType" start="169" end="197" abstract="false" final="false" static="false" visibility="protected">
+    <method name="getMimeType" start="166" end="194" abstract="false" final="false" static="false" visibility="protected">
       <docblock>
         <description compact="Get mime type"/>
         <access value="protected"/>
@@ -124,7 +123,7 @@
       </docblock>
       <parameter name="file" byreference="false" type="{unknown}"/>
     </method>
-    <method name="convertDatatablesRequest" start="206" end="221" abstract="false" final="false" static="false" visibility="protected">
+    <method name="convertDatatablesRequest" start="203" end="218" abstract="false" final="false" static="false" visibility="protected">
       <docblock>
         <description compact="Get mime type"/>
         <access value="protected"/>

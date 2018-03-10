@@ -32,124 +32,123 @@
   <parent full="Controllers\Authenticated" namespace="Controllers" name="Authenticated">
     <extends full="Core\Controller" namespace="Core" name="Controller"/>
     <method name="before" start="19" end="22" abstract="false" final="false" static="false" visibility="protected">
-    <docblock>
-      <description compact="Require the user to be authenticated before giving access to all methods in the controller"/>
-      <return type="object">
-        <type full="Controllers\void" namespace="Controllers" name="void"/>
-      </return>
-    </docblock>
-  </method>
+      <docblock>
+        <description compact="Require the user to be authenticated before giving access to all methods in the controller"/>
+        <return type="object">
+          <type full="Controllers\void" namespace="Controllers" name="void"/>
+        </return>
+      </docblock>
+    </method>
   </parent>
   <parent full="Core\Controller" namespace="Core" name="Controller">
     <member name="request" default="NULL" visibility="protected" static="false" line="21">
-    <docblock>
-      <description compact="Parameters from the matched route"/>
-      <var type="object">
-        <type full="Core\Request" namespace="Core" name="Request"/>
-      </var>
-    </docblock>
-  </member>
+      <docblock>
+        <description compact="Parameters from the matched route"/>
+        <var type="object">
+          <type full="Core\Request" namespace="Core" name="Request"/>
+        </var>
+      </docblock>
+    </member>
     <member name="datatablesReq" default="" type="array" visibility="protected" static="false" line="27">
-    <docblock>
-      <description compact="Parameters from the datatable request"/>
-      <var type="array"/>
-    </docblock>
-  </member>
+      <docblock>
+        <description compact="Parameters from the datatable request"/>
+        <var type="array"/>
+      </docblock>
+    </member>
     <constructor name="__construct" start="34" end="37" abstract="false" final="false" static="false" visibility="public">
-    <docblock>
-      <description compact="Class constructor"/>
-      <param description="Request object" type="object" variable="$request">
-        <type full="Core\Request" namespace="Core" name="Request"/>
-      </param>
-    </docblock>
-    <parameter name="request" byreference="false" type="{unknown}"/>
-  </constructor>
-    <method name="__call" start="50" end="63" abstract="false" final="false" static="false" visibility="public">
-    <docblock>
-      <description compact="Magic method called when a non-existent or inaccessible method is called on an object of this class. Used to execute before and after filter methods on action methods. Action methods need to be named with an &quot;Action&quot; suffix, e.g. indexAction, showAction etc."/>
-      <access value="public"/>
-      <param description="Method name" type="string" variable="$name"/>
-      <param description="Arguments passed to the method" type="array" variable="$args"/>
-      <return type="object">
-        <type full="Core\void" namespace="Core" name="void"/>
-      </return>
-    </docblock>
-    <parameter name="name" byreference="false" type="{unknown}"/>
-    <parameter name="args" byreference="false" type="{unknown}"/>
-  </method>
-    <method name="before" start="70" end="70" abstract="false" final="false" static="false" visibility="protected">
-    <docblock>
-      <description compact="Before filter - called before any action method."/>
-      <return type="object">
-        <type full="Core\void" namespace="Core" name="void"/>
-      </return>
-    </docblock>
-  </method>
-    <method name="after" start="77" end="77" abstract="false" final="false" static="false" visibility="protected">
-    <docblock>
-      <description compact="After filter - called after any action method."/>
-      <return type="object">
-        <type full="Core\void" namespace="Core" name="void"/>
-      </return>
-    </docblock>
-  </method>
-    <method name="redirect" start="86" end="90" abstract="false" final="false" static="false" visibility="public">
-    <docblock>
-      <description compact="Redirect to a different page"/>
-      <access value="public"/>
-      <param description="The relative URL" type="string" variable="$url"/>
-      <return type="object">
-        <type full="Core\void" namespace="Core" name="void"/>
-      </return>
-    </docblock>
-    <parameter name="url" byreference="false" type="{unknown}"/>
-  </method>
-    <method name="requireLogin" start="98" end="106" abstract="false" final="false" static="false" visibility="public">
-    <docblock>
-      <description compact="Require the user to be logged in before giving access to the requested page."/>
-      <access value="public"/>
-      <return type="object">
-        <type full="Core\void" namespace="Core" name="void"/>
-      </return>
-    </docblock>
-  </method>
-    <method name="requireNoLogin" start="114" end="120" abstract="false" final="false" static="false" visibility="public">
-    <docblock>
-      <description compact="Require the user not to be logged in before giving access to the requested page."/>
-      <access value="public"/>
-      <return type="object">
-        <type full="Core\void" namespace="Core" name="void"/>
-      </return>
-    </docblock>
-  </method>
-    <method name="startDownload" start="130" end="160" abstract="false" final="false" static="false" visibility="protected">
-    <docblock>
-      <description compact="Start a download"/>
-      <access value="protected"/>
-      <param description="File location" type="string" variable="$file"/>
-      <param description="MIME type of file" type="string" variable="$contentType"/>
-      <return type="object">
-        <type full="Core\void" namespace="Core" name="void"/>
-      </return>
-    </docblock>
-    <parameter name="file" byreference="false" type="{unknown}"/>
-  </method>
-    <method name="getMimeType" start="169" end="197" abstract="false" final="false" static="false" visibility="protected">
-    <docblock>
-      <description compact="Get mime type"/>
-      <access value="protected"/>
-      <param description="File location" type="string" variable="$file"/>
-      <return description="Mime type of file" type="string"/>
-    </docblock>
-    <parameter name="file" byreference="false" type="{unknown}"/>
-  </method>
-    <method name="convertDatatablesRequest" start="206" end="221" abstract="false" final="false" static="false" visibility="protected">
-    <docblock>
-      <description compact="Get mime type"/>
-      <access value="protected"/>
-      <param description="File location" type="string" variable="$file"/>
-      <return description="Mime type of file" type="string"/>
-    </docblock>
-  </method>
+      <docblock>
+        <description compact="Class constructor"/>
+        <param description="Request object" type="object" variable="$request">
+          <type full="Core\Request" namespace="Core" name="Request"/>
+        </param>
+      </docblock>
+      <parameter name="request" byreference="false" type="{unknown}"/>
+    </constructor>
+    <method name="__call" start="47" end="60" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Used to execute before and after methods on action method.">Action methods need to be named with an "Action" suffix.</description>
+        <param description="Method name" type="string" variable="$name"/>
+        <param description="Arguments passed to the method" type="array" variable="$args"/>
+        <return type="object">
+          <type full="Core\void" namespace="Core" name="void"/>
+        </return>
+      </docblock>
+      <parameter name="name" byreference="false" type="{unknown}"/>
+      <parameter name="args" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="before" start="67" end="67" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Before filter - called before any action method."/>
+        <return type="object">
+          <type full="Core\void" namespace="Core" name="void"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="after" start="74" end="74" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="After filter - called after any action method."/>
+        <return type="object">
+          <type full="Core\void" namespace="Core" name="void"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="redirect" start="83" end="87" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Redirect to a different page"/>
+        <access value="public"/>
+        <param description="The relative URL" type="string" variable="$url"/>
+        <return type="object">
+          <type full="Core\void" namespace="Core" name="void"/>
+        </return>
+      </docblock>
+      <parameter name="url" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="requireLogin" start="95" end="103" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Require the user to be logged in before giving access to the requested page."/>
+        <access value="public"/>
+        <return type="object">
+          <type full="Core\void" namespace="Core" name="void"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="requireNoLogin" start="111" end="117" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Require the user not to be logged in before giving access to the requested page."/>
+        <access value="public"/>
+        <return type="object">
+          <type full="Core\void" namespace="Core" name="void"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="startDownload" start="127" end="157" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Start a download"/>
+        <access value="protected"/>
+        <param description="File location" type="string" variable="$file"/>
+        <param description="MIME type of file" type="string" variable="$contentType"/>
+        <return type="object">
+          <type full="Core\void" namespace="Core" name="void"/>
+        </return>
+      </docblock>
+      <parameter name="file" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getMimeType" start="166" end="194" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Get mime type"/>
+        <access value="protected"/>
+        <param description="File location" type="string" variable="$file"/>
+        <return description="Mime type of file" type="string"/>
+      </docblock>
+      <parameter name="file" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="convertDatatablesRequest" start="203" end="218" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Get mime type"/>
+        <access value="protected"/>
+        <param description="File location" type="string" variable="$file"/>
+        <return description="Mime type of file" type="string"/>
+      </docblock>
+    </method>
   </parent>
 </class>
