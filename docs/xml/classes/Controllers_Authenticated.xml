@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Controllers\Authenticated" namespace="Controllers" name="Authenticated" abstract="true" final="false" start="11" end="23">
-  <file path="/var/www/media/app/Controllers" file="Authenticated.php" realpath="/var/www/media/app/Controllers/Authenticated.php" size="374" time="2018-03-08T22:17:38+00:00" unixtime="1520547458" sha1="f1acd37c4d6c25bb75e74455f52c4ff0dae3ccde" relative="Controllers/Authenticated.php"/>
+  <file path="/var/www/media/app/Controllers" file="Authenticated.php" realpath="/var/www/media/app/Controllers/Authenticated.php" size="374" time="2018-03-10T13:45:51+00:00" unixtime="1520689551" sha1="f1acd37c4d6c25bb75e74455f52c4ff0dae3ccde" relative="Controllers/Authenticated.php"/>
   <docblock>
     <description compact="Authenticated base controller">PHP version 7.0</description>
   </docblock>

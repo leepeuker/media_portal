@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Controllers\Admin" namespace="Controllers" name="Admin" abstract="false" final="false" start="14" end="59">
-  <file path="/var/www/media/app/Controllers" file="Admin.php" realpath="/var/www/media/app/Controllers/Admin.php" size="1049" time="2018-03-10T11:52:16+00:00" unixtime="1520682736" sha1="fc85bf05e1ba785e2660da410204535acef3eab4" relative="Controllers/Admin.php"/>
+  <file path="/var/www/media/app/Controllers" file="Admin.php" realpath="/var/www/media/app/Controllers/Admin.php" size="1049" time="2018-03-10T13:45:53+00:00" unixtime="1520689553" sha1="fc85bf05e1ba785e2660da410204535acef3eab4" relative="Controllers/Admin.php"/>
   <docblock>
     <description compact="Admin controller">PHP version 7.0</description>
   </docblock>

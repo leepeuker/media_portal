@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Core\Session" namespace="Core" name="Session" abstract="false" final="false" start="10" end="104">
+  <file path="/var/www/media/app/Core" file="Session.php" realpath="/var/www/media/app/Core/Session.php" size="3082" time="2018-03-10T14:35:54+00:00" unixtime="1520692554" sha1="ca7e6c769a7793d64a63717b916465a46878c1aa" relative="Core/Session.php"/>
+  <docblock>
+    <description compact="Handles session management">PHP version 7.0</description>
+  </docblock>
+  <constructor name="__construct" start="15" end="15" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Constructor"/>
+    </docblock>
+  </constructor>
+  <method name="start" start="22" end="49" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Starts the session"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="destroy" start="56" end="81" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Destroys the session"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="setUser" start="88" end="93" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Generate user specific session"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="id" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getUserId" start="100" end="103" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get active user id"/>
+      <return type="object">
+        <type full="Core\int|null" namespace="Core" name="int|null"/>
+      </return>
+    </docblock>
+  </method>
+</class>

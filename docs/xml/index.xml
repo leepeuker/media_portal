@@ -17,6 +17,7 @@
   <namespace name="Core">
     <class name="Router" src="Core/Router.php" description="Routes the http request and calls the matching controller/action method" xml="classes/Core_Router.xml"/>
     <class name="Controller" src="Core/Controller.php" description="Base controller" xml="classes/Core_Controller.xml"/>
+    <class name="Session" src="Core/Session.php" description="Handles session management" xml="classes/Core_Session.xml"/>
     <class name="Model" src="Core/Model.php" description="Base model" xml="classes/Core_Model.xml"/>
     <class name="Config" src="Core/Config.php" description="Application configuration" xml="classes/Core_Config.xml"/>
     <class name="Request" src="Core/Request.php" description="Provides access to the http request" xml="classes/Core_Request.xml"/>

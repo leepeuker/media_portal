@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="Controllers\Comics" namespace="Controllers" name="Comics" abstract="false" final="false" start="13" end="77">
-  <file path="/var/www/media/app/Controllers" file="Comics.php" realpath="/var/www/media/app/Controllers/Comics.php" size="1622" time="2018-03-08T22:17:26+00:00" unixtime="1520547446" sha1="2446642c6567875f36a02a0402f4cffb8e9696c0" relative="Controllers/Comics.php"/>
+  <file path="/var/www/media/app/Controllers" file="Comics.php" realpath="/var/www/media/app/Controllers/Comics.php" size="1622" time="2018-03-10T13:45:48+00:00" unixtime="1520689548" sha1="2446642c6567875f36a02a0402f4cffb8e9696c0" relative="Controllers/Comics.php"/>
   <docblock>
     <description compact="Comics controller">PHP version 7.0</description>
   </docblock>
