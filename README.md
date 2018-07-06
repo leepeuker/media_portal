@@ -13,12 +13,3 @@ To display (or delete/edit/create) all this informations in a browser I created 
 * PHP and my own MVC framework
 * MYSQL
 * HTML, JavaScript, CSS
-
-### Provides
-
-* A full html/xml documentation about the php source code
-* Unit tests (coming soon)
-
-### Online Documentation
-
-[www.leepeuker.de/docs/media_portal/index.xhtml](https://www.leepeuker.de/docs/media_portal/index.xhtml)
